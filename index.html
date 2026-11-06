@@ -7,7 +7,7 @@
   <title>Desastres Naturales</title>
 </head>
 
-<body>
+<body class="min-h-screen bg-gunmetal-50 text-gunmetal-900 dark:bg-gunmetal-950 dark:text-gunmetal-100">
   <div id="app">
     <header class="bg-gunmetal-900 px-4 py-3">
       <div class="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
@@ -32,37 +32,19 @@
                 Contáctanos
               </a>
             </li>
+            <li>
+              <button id="theme-toggle" type="button" aria-label="Cambiar al modo oscuro" aria-pressed="false"
+                class="flex items-center gap-2 rounded-lg border border-gunmetal-500 px-3 py-2 text-base text-gunmetal-50 hover:border-tropical-mint-400 hover:text-tropical-mint-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tropical-mint-400">
+                <span id="theme-icon" aria-hidden="true">☾</span>
+                <span id="theme-label">Modo oscuro</span>
+              </button>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
-    <main class="mx-auto max-w-6xl px-4 py-8">
-      <section class="mb-8">
-        <h1 class="mb-4 text-3xl font-bold text-gunmetal-900">Bienvenido a Desastres Naturales</h1>
-        <p class="text-lg text-gunmetal-700">
-          Explora información detallada sobre desastres naturales, sus causas, efectos y cómo prepararte para ellos.
-        </p>
-      </section>
-      <section class="mb-8">
-        <h2 class="mb-4 text-2xl font-semibold text-gunmetal-900">Últimas Noticias</h2>
-        <ul class="list-disc pl-5 text-gunmetal-700">
-          <li>Terremoto de magnitud 7.2 sacude la región costera.</li>
-          <li>Inundaciones afectan a miles de personas en el norte del país.</li>
-          <li>Se pronostican huracanes para la próxima temporada, prepárate con nuestras guías.</li>
-        </ul>
-      </section>
-      <section>
-        <h2 class="mb-4 text-2xl font-semibold text-gunmetal-900">Recursos y Consejos</h2>
-        <p class="text-gunmetal-700">
-          Aprende cómo protegerte y proteger a tu familia durante desastres naturales.
-        </p>
-        <ul class="list-disc pl-5 text-gunmetal-700">
-          <li>Guías de preparación para terremotos, huracanes e inundaciones.</li>
-          <li>Listas de suministros esenciales para emergencias.</li>
-          <li>Consejos de seguridad y evacuación.</li>
-        </ul>
-      </section>
-
+    <main class="">
+      
     </main>
     <footer class="bg-gunmetal-900 px-4 py-3">
       <div class="mx-auto max-w-6xl text-center text-gunmetal-50">

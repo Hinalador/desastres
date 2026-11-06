@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reportar un desastre natural</title>
 </head>
-<body class="min-h-screen bg-gunmetal-50 text-gunmetal-900">
+<body class="min-h-screen bg-gunmetal-50 text-gunmetal-900 dark:bg-gunmetal-950 dark:text-gunmetal-100">
   <header class="bg-gunmetal-900 px-4 py-3">
       <div class="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <a href="/">
@@ -29,19 +29,26 @@
                 Contáctanos
               </a>
             </li>
+            <li>
+              <button id="theme-toggle" type="button" aria-label="Cambiar al modo oscuro" aria-pressed="false"
+                class="flex items-center gap-2 rounded-lg border border-gunmetal-500 px-3 py-2 text-base text-gunmetal-50 hover:border-tropical-mint-400 hover:text-tropical-mint-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tropical-mint-400">
+                <span id="theme-icon" aria-hidden="true">☾</span>
+                <span id="theme-label">Modo oscuro</span>
+              </button>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
   <main class="mx-auto max-w-3xl px-4 py-10">
-    <section class="rounded-lg bg-white p-6 shadow-md sm:p-8">
-      <h1 class="mb-2 text-3xl font-bold">Reportar un desastre natural</h1>
-      <p class="mb-6 text-gunmetal-700">
+    <section class="rounded-lg bg-white p-6 shadow-md sm:p-8 dark:bg-gunmetal-900">
+      <h1 class="mb-2 text-3xl font-bold dark:text-gunmetal-50">Reportar un desastre natural</h1>
+      <p class="mb-6 text-gunmetal-700 dark:text-gunmetal-300">
         Comparte la información que conoces para ayudar a identificar la situación.
       </p>
 
-      <div class="mb-6 rounded-md border border-red-400 bg-red-50 p-4 text-sm text-gunmetal-800">
+      <div class="mb-6 rounded-md border border-red-400 bg-red-50 p-4 text-sm text-gunmetal-800 dark:border-red-700 dark:bg-red-950 dark:text-red-100">
         Si hay peligro inmediato, comunícate con los servicios de emergencia de tu zona.
       </div>
 
@@ -49,7 +56,7 @@
         <div>
           <label for="tipo" class="mb-1 block font-medium">¿Qué desastre quieres reportar?</label>
           <select id="tipo" name="tipo" required
-            class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400">
+            class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400">
             <option value="">Selecciona una opción</option>
             <option value="incendio">Incendio forestal</option>
             <option value="temblor">Temblor o sismo</option>
@@ -66,45 +73,45 @@
           <div>
             <label for="fecha" class="mb-1 block font-medium">Día del desastre</label>
             <input id="fecha" name="fecha" type="date" required
-              class="w-full rounded-md border border-gunmetal-300 px-3 py-2 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
+              class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
           </div>
           <div>
             <label for="hora" class="mb-1 block font-medium">Hora aproximada</label>
             <input id="hora" name="hora" type="time" required
-              class="w-full rounded-md border border-gunmetal-300 px-3 py-2 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
+              class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
           </div>
         </div>
 
         <div>
           <label for="ubicacion" class="mb-1 block font-medium">Ubicación</label>
           <input id="ubicacion" name="ubicacion" type="text" placeholder="Ciudad, barrio o dirección de referencia" required
-            class="w-full rounded-md border border-gunmetal-300 px-3 py-2 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
+            class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
         </div>
 
         <div>
           <label for="descripcion" class="mb-1 block font-medium">¿Qué está ocurriendo?</label>
           <textarea id="descripcion" name="descripcion" rows="4" placeholder="Describe brevemente lo que observaste"
-            required class="w-full rounded-md border border-gunmetal-300 px-3 py-2 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400"></textarea>
+            required class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400"></textarea>
         </div>
 
         <div class="border-t border-gunmetal-200 pt-5">
-          <h2 class="mb-4 text-xl font-semibold">Tus datos de contacto</h2>
+          <h2 class="mb-4 text-xl font-semibold dark:text-gunmetal-50">Tus datos de contacto</h2>
           <div class="space-y-5">
             <div>
               <label for="nombre" class="mb-1 block font-medium">Nombre</label>
               <input id="nombre" name="nombre" type="text" autocomplete="name" required
-                class="w-full rounded-md border border-gunmetal-300 px-3 py-2 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
+                class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
             </div>
             <div class="grid gap-5 sm:grid-cols-2">
               <div>
                 <label for="correo" class="mb-1 block font-medium">Correo electrónico</label>
                 <input id="correo" name="correo" type="email" autocomplete="email"
-                  class="w-full rounded-md border border-gunmetal-300 px-3 py-2 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
+                  class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
               </div>
               <div>
                 <label for="telefono" class="mb-1 block font-medium">Teléfono (opcional)</label>
                 <input id="telefono" name="telefono" type="tel" autocomplete="tel"
-                  class="w-full rounded-md border border-gunmetal-300 px-3 py-2 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
+                  class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
               </div>
             </div>
           </div>
