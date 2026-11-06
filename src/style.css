@@ -2,6 +2,100 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+.flip-card {
+  display: block;
+  border-radius: 1rem;
+}
+
+.flip-card-inner {
+  position: relative;
+  display: block;
+  min-height: 22rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 10px 24px rgb(16 19 19 / 12%);
+}
+
+.flip-card-face {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.flip-card-front img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 500ms;
+}
+
+.flip-card-front::after {
+  position: absolute;
+  inset: 35% 0 0;
+  background: linear-gradient(transparent, rgb(16 19 19 / 80%));
+  content: "";
+}
+
+.flip-card-front > span {
+  position: absolute;
+  z-index: 1;
+  inset: auto 0 0;
+  padding: 1.25rem;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.flip-card-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(16 19 19 / 90%);
+  color: white;
+  opacity: 0;
+  padding: 1.5rem;
+  transition: opacity 300ms ease;
+}
+
+.flip-card-back > span:first-child {
+  color: #78edc8;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.flip-card-back > span:last-child {
+  margin-top: 0.75rem;
+  line-height: 1.625;
+}
+
+.flip-card:hover .flip-card-front img,
+.flip-card:focus-visible .flip-card-front img,
+.flip-card[aria-pressed="true"] .flip-card-front img {
+  transform: scale(1.06);
+}
+
+.flip-card:hover .flip-card-back,
+.flip-card:focus-visible .flip-card-back,
+.flip-card[aria-pressed="true"] .flip-card-back {
+  opacity: 1;
+}
+
+.flip-card:focus-visible {
+  outline: 3px solid #4be7b5;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flip-card-front img,
+  .flip-card-back {
+    transition-duration: 0ms;
+  }
+}
+
 @theme {
 
 --color-gunmetal-50: #f1f3f3;

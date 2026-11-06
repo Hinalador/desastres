@@ -2,11 +2,8 @@ import './style.css'
 
 const themeToggle = document.querySelector('#theme-toggle')
 const themeIcon = document.querySelector('#theme-icon')
-const themeLabel = document.querySelector('#theme-label')
 
-if (!(themeToggle instanceof HTMLButtonElement) ||
-    !(themeIcon instanceof HTMLSpanElement) ||
-    !(themeLabel instanceof HTMLSpanElement)) {
+if (!(themeToggle instanceof HTMLButtonElement) || !(themeIcon instanceof HTMLSpanElement)) {
   throw new Error('No se encontraron los elementos del botón de tema.')
 }
 
@@ -19,7 +16,6 @@ const updateTheme = () => {
   themeToggle.setAttribute('aria-pressed', String(isDarkMode))
   themeToggle.setAttribute('aria-label', `Cambiar al modo ${isDarkMode ? 'claro' : 'oscuro'}`)
   themeIcon.textContent = isDarkMode ? '☀' : '☾'
-  themeLabel.textContent = `Modo ${isDarkMode ? 'claro' : 'oscuro'}`
 }
 
 updateTheme()
@@ -28,6 +24,16 @@ themeToggle.addEventListener('click', () => {
   isDarkMode = !isDarkMode
   localStorage.setItem('theme', isDarkMode ? 'dark' : 'light')
   updateTheme()
+})
+
+document.querySelectorAll('.flip-card').forEach((card) => {
+  if (!(card instanceof HTMLButtonElement)) {
+    throw new Error('Se encontró una tarjeta informativa que no es un botón.')
+  }
+
+  card.addEventListener('click', () => {
+    card.setAttribute('aria-pressed', String(card.getAttribute('aria-pressed') !== 'true'))
+  })
 })
 
 const openModalButton = document.querySelector('#open-modal')
