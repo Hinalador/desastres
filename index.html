@@ -32,19 +32,151 @@
                 Contáctanos
               </a>
             </li>
-            <li>
-              <button id="theme-toggle" type="button" aria-label="Cambiar al modo oscuro" aria-pressed="false"
-                class="flex items-center gap-2 rounded-lg border border-gunmetal-500 px-3 py-2 text-base text-gunmetal-50 hover:border-tropical-mint-400 hover:text-tropical-mint-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tropical-mint-400">
-                <span id="theme-icon" aria-hidden="true">☾</span>
-                <span id="theme-label">Modo oscuro</span>
-              </button>
-            </li>
           </ul>
         </nav>
+        <button id="theme-toggle" type="button" aria-label="Cambiar al modo oscuro" aria-pressed="false"
+          title="Cambiar tema"
+          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gunmetal-500 text-2xl text-gunmetal-50 hover:border-tropical-mint-400 hover:text-tropical-mint-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tropical-mint-400">
+          <span id="theme-icon" aria-hidden="true">☾</span>
+        </button>
       </div>
     </header>
-    <main class="">
-      
+    <main>
+      <section aria-labelledby="welcome-title" class="relative isolate flex min-h-[70vh] items-center justify-center overflow-hidden bg-gunmetal-900 px-6 py-24 text-center sm:min-h-[75vh]">
+        <img src="/src/Img/wallhaven-43plly_1920x1080.png" alt=""
+          class="absolute inset-0 -z-20 h-full w-full object-cover object-center" />
+        <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gunmetal-950/60"></div>
+        <div class="mx-auto max-w-3xl text-white">
+          <p class="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-tropical-mint-300 sm:text-base">
+            Información y prevención
+          </p>
+          <h1 id="welcome-title" class="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+            Bienvenido a Desastres Naturales
+          </h1>
+          <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gunmetal-50 sm:text-xl">
+            Somos una página dedicada a informar sobre los desastres naturales, explicar sus causas y efectos, y compartir
+            recomendaciones para que tú y tu comunidad puedan prepararse y actuar con mayor seguridad.
+          </p>
+        </div>
+      </section>
+      <section aria-labelledby="topics-title" class="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-12 lg:px-8 lg:py-16">
+        <aside class="h-fit rounded-2xl bg-white p-5 shadow-sm dark:bg-gunmetal-900 lg:sticky lg:top-6">
+          <h2 class="mb-4 text-lg font-bold text-gunmetal-900 dark:text-gunmetal-50">Explora los temas</h2>
+          <nav aria-label="Temas sobre desastres naturales">
+            <ul class="space-y-2">
+              <li>
+                <a href="#terremotos" class="block rounded-lg px-3 py-2 text-gunmetal-700 hover:bg-gunmetal-50 hover:text-deep-teal-700 focus-visible:outline-2 focus-visible:outline-deep-teal-700 dark:text-gunmetal-200 dark:hover:bg-gunmetal-800 dark:hover:text-tropical-mint-300">
+                  Terremotos
+                </a>
+              </li>
+              <li>
+                <a href="#inundaciones" class="block rounded-lg px-3 py-2 text-gunmetal-700 hover:bg-gunmetal-50 hover:text-deep-teal-700 focus-visible:outline-2 focus-visible:outline-deep-teal-700 dark:text-gunmetal-200 dark:hover:bg-gunmetal-800 dark:hover:text-tropical-mint-300">
+                  Inundaciones y tsunamis
+                </a>
+              </li>
+              <li>
+                <a href="#incendios" class="block rounded-lg px-3 py-2 text-gunmetal-700 hover:bg-gunmetal-50 hover:text-deep-teal-700 focus-visible:outline-2 focus-visible:outline-deep-teal-700 dark:text-gunmetal-200 dark:hover:bg-gunmetal-800 dark:hover:text-tropical-mint-300">
+                  Incendios forestales
+                </a>
+              </li>
+              <li>
+                <a href="#volcanes" class="block rounded-lg px-3 py-2 text-gunmetal-700 hover:bg-gunmetal-50 hover:text-deep-teal-700 focus-visible:outline-2 focus-visible:outline-deep-teal-700 dark:text-gunmetal-200 dark:hover:bg-gunmetal-800 dark:hover:text-tropical-mint-300">
+                  Erupciones volcánicas
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="mt-6 rounded-xl bg-tropical-mint-50 p-4 dark:bg-gunmetal-800">
+            <p class="text-sm leading-relaxed text-gunmetal-700 dark:text-gunmetal-200">
+              Conocer los riesgos de tu zona ayuda a prepararte. Sigue siempre las indicaciones de las autoridades locales.
+            </p>
+          </div>
+        </aside>
+
+        <div>
+          <div class="mb-8">
+            <p class="mb-2 text-sm font-semibold uppercase tracking-wider text-deep-teal-700 dark:text-tropical-mint-300">
+              Aprende y prepárate
+            </p>
+            <h2 id="topics-title" class="text-3xl font-bold text-gunmetal-900 dark:text-gunmetal-50">
+              Información sobre desastres naturales
+            </h2>
+            <p class="mt-3 max-w-3xl leading-relaxed text-gunmetal-700 dark:text-gunmetal-300">
+              Cada fenómeno tiene características y riesgos distintos. Explora estas guías introductorias y descubre algunas medidas básicas de prevención.
+            </p>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-2">
+            <article id="terremotos">
+              <button type="button" class="flip-card w-full text-left" aria-pressed="false"
+                aria-label="Mostrar u ocultar información sobre terremotos">
+                <span class="flip-card-inner">
+                  <span class="flip-card-face flip-card-front">
+                    <img src="/src/Img/4.png" alt="Daños en edificios y calles después de un terremoto"
+                      loading="lazy" />
+                    <span class="block p-5 text-xl font-bold text-gunmetal-900 dark:text-gunmetal-50">Terremotos</span>
+                  </span>
+                  <span class="flip-card-face flip-card-back">
+                    <span class="text-xl font-bold">¿Qué es un terremoto?</span>
+                    <span class="mt-3 leading-relaxed">Es una sacudida del suelo causada por la liberación repentina de energía en la corteza terrestre. Durante uno, agáchate, cúbrete y sujétate; aléjate de ventanas.</span>
+                  </span>
+                </span>
+              </button>
+            </article>
+
+            <article id="inundaciones">
+              <button type="button" class="flip-card w-full text-left" aria-pressed="false"
+                aria-label="Mostrar u ocultar información sobre inundaciones y tsunamis">
+                <span class="flip-card-inner">
+                  <span class="flip-card-face flip-card-front">
+                    <img src="/src/Img/6.png" alt="Ola de gran tamaño acercándose a una zona costera"
+                      loading="lazy" />
+                    <span class="block p-5 text-xl font-bold text-gunmetal-900 dark:text-gunmetal-50">Inundaciones y tsunamis</span>
+                  </span>
+                  <span class="flip-card-face flip-card-back">
+                    <span class="text-xl font-bold">¿Qué son?</span>
+                    <span class="mt-3 leading-relaxed">Una inundación ocurre cuando el agua cubre zonas normalmente secas. Un tsunami es una serie de olas grandes, generalmente causada por movimientos submarinos. Aléjate de ríos crecidos y costas si hay alertas.</span>
+                  </span>
+                </span>
+              </button>
+            </article>
+
+            <article id="incendios">
+              <button type="button" class="flip-card w-full text-left" aria-pressed="false"
+                aria-label="Mostrar u ocultar información sobre incendios forestales">
+                <span class="flip-card-inner">
+                  <span class="flip-card-face flip-card-front">
+                    <img src="/src/Img/2.png" alt="Incendio forestal avanzando entre árboles"
+                      loading="lazy" />
+                    <span class="block p-5 text-xl font-bold text-gunmetal-900 dark:text-gunmetal-50">Incendios forestales</span>
+                  </span>
+                  <span class="flip-card-face flip-card-back">
+                    <span class="text-xl font-bold">¿Qué es un incendio forestal?</span>
+                    <span class="mt-3 leading-relaxed">Es un fuego que se propaga sin control por bosques o áreas naturales. El calor, el viento y la vegetación seca pueden acelerarlo. Sigue las alertas y evacúa cuando las autoridades lo indiquen.</span>
+                  </span>
+                </span>
+              </button>
+            </article>
+
+            <article id="volcanes">
+              <button type="button" class="flip-card w-full text-left" aria-pressed="false"
+                aria-label="Mostrar u ocultar información sobre erupciones volcánicas">
+                <span class="flip-card-inner">
+                  <span class="flip-card-face flip-card-front">
+                    <img src="/src/Img/7.png" alt="Volcán en erupción durante la noche"
+                      loading="lazy" />
+                    <span class="block p-5 text-xl font-bold text-gunmetal-900 dark:text-gunmetal-50">Erupciones volcánicas</span>
+                  </span>
+                  <span class="flip-card-face flip-card-back">
+                    <span class="text-xl font-bold">¿Qué es una erupción volcánica?</span>
+                    <span class="mt-3 leading-relaxed">Es la salida de magma, gases y ceniza desde el interior de un volcán. Puede generar flujos y caída de materiales peligrosos; respeta las zonas de evacuación y protégete de la ceniza según las alertas oficiales.</span>
+                  </span>
+                </span>
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="bg-gunmetal-900 px-4 py-3">
       <div class="mx-auto max-w-6xl text-center text-gunmetal-50">
