@@ -22,7 +22,7 @@
             </a>
           </li>
           <li class="transition-transform duration-200 ease-in-out hover:scale-110">
-            <a href="/about" class="text-gunmetal-50 hover:text-tropical-mint-400">
+            <a href="#" class="text-gunmetal-50 hover:text-tropical-mint-400">
               Acerca de
             </a>
           </li>
@@ -31,15 +31,13 @@
               Contáctanos
             </a>
           </li>
-          <li>
-            <button id="theme-toggle" type="button" aria-label="Cambiar al modo oscuro" aria-pressed="false"
-              class="flex items-center gap-2 rounded-lg border border-gunmetal-500 px-3 py-2 text-base text-gunmetal-50 hover:border-tropical-mint-400 hover:text-tropical-mint-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tropical-mint-400">
-              <span id="theme-icon" aria-hidden="true">☾</span>
-              <span id="theme-label">Modo oscuro</span>
-            </button>
-          </li>
         </ul>
       </nav>
+      <button id="theme-toggle" type="button" aria-label="Cambiar al modo oscuro" aria-pressed="false"
+        title="Cambiar tema"
+        class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gunmetal-500 text-2xl text-gunmetal-50 hover:border-tropical-mint-400 hover:text-tropical-mint-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tropical-mint-400">
+        <span id="theme-icon" aria-hidden="true">☾</span>
+      </button>
     </div>
   </header>
 
@@ -201,7 +199,7 @@
             <div class="mt-4 grid gap-5 sm:grid-cols-2">
               <div>
                 <label for="nombre" class="mb-1.5 block text-sm font-semibold">Nombre <span aria-hidden="true">*</span></label>
-                <input id="nombre" name="nombre" type="text" autocomplete="name" required
+                <input id="nombre" name="nombre" type="text" autocomplete="name" placeholder="nombre completo" required
                   class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2.5 text-gunmetal-900 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50" />
               </div>
               <div>
