@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reportar un desastre natural</title>
+</head>
+<body class="min-h-screen bg-gunmetal-50 text-gunmetal-900">
+  <header class="bg-gunmetal-900 p-4 text-white">
+    <nav class="mx-auto flex max-w-5xl items-center justify-between">
+      <a href="../index.html" class="text-lg font-bold">Desastres Naturales</a>
+      <a href="../index.html" class="rounded px-3 py-2 hover:bg-gunmetal-700">Inicio</a>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-3xl px-4 py-10">
+    <section class="rounded-lg bg-white p-6 shadow-md sm:p-8">
+      <h1 class="mb-2 text-3xl font-bold">Reportar un desastre natural</h1>
+      <p class="mb-6 text-gunmetal-700">
+        Comparte la información que conoces para ayudar a identificar la situación.
+      </p>
+
+      <div class="mb-6 rounded-md border border-red-400 bg-red-50 p-4 text-sm text-gunmetal-800">
+        Si hay peligro inmediato, comunícate con los servicios de emergencia de tu zona.
+      </div>
+
+      <form action="#" method="post" class="space-y-5">
+        <div>
+          <label for="tipo" class="mb-1 block font-medium">¿Qué desastre quieres reportar?</label>
+          <select id="tipo" name="tipo" required
+            class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400">
+            <option value="">Selecciona una opción</option>
+            <option value="incendio">Incendio forestal</option>
+            <option value="temblor">Temblor o sismo</option>
+            <option value="terremoto">Terremoto</option>
+            <option value="tsunami">Tsunami</option>
+            <option value="inundacion">Inundación</option>
+            <option value="deslizamiento">Deslizamiento de tierra</option>
+            <option value="erupcion">Erupción volcánica</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="grid gap-5 sm:grid-cols-2">
+          <div>
+            <label for="fecha" class="mb-1 block font-medium">Día del desastre</label>
+            <input id="fecha" name="fecha" type="date" required
+              class="w-full rounded-md border border-gunmetal-300 px-3 py-2 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
+          </div>
+          <div>
+            <label for="hora" class="mb-1 block font-medium">Hora aproximada</label>
+            <input id="hora" name="hora" type="time" required
+              class="w-full rounded-md border border-gunmetal-300 px-3 py-2 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
+          </div>
+        </div>
+
+        <div>
+          <label for="ubicacion" class="mb-1 block font-medium">Ubicación</label>
+          <input id="ubicacion" name="ubicacion" type="text" placeholder="Ciudad, barrio o dirección de referencia" required
+            class="w-full rounded-md border border-gunmetal-300 px-3 py-2 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
+        </div>
+
+        <div>
+          <label for="descripcion" class="mb-1 block font-medium">¿Qué está ocurriendo?</label>
+          <textarea id="descripcion" name="descripcion" rows="4" placeholder="Describe brevemente lo que observaste"
+            required class="w-full rounded-md border border-gunmetal-300 px-3 py-2 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400"></textarea>
+        </div>
+
+        <div class="border-t border-gunmetal-200 pt-5">
+          <h2 class="mb-4 text-xl font-semibold">Tus datos de contacto</h2>
+          <div class="space-y-5">
+            <div>
+              <label for="nombre" class="mb-1 block font-medium">Nombre</label>
+              <input id="nombre" name="nombre" type="text" autocomplete="name" required
+                class="w-full rounded-md border border-gunmetal-300 px-3 py-2 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
+            </div>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label for="correo" class="mb-1 block font-medium">Correo electrónico</label>
+                <input id="correo" name="correo" type="email" autocomplete="email"
+                  class="w-full rounded-md border border-gunmetal-300 px-3 py-2 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
+              </div>
+              <div>
+                <label for="telefono" class="mb-1 block font-medium">Teléfono (opcional)</label>
+                <input id="telefono" name="telefono" type="tel" autocomplete="tel"
+                  class="w-full rounded-md border border-gunmetal-300 px-3 py-2 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit"
+          class="w-full rounded-md bg-red-400 px-4 py-3 font-semibold text-white hover:bg-red-500 sm:w-auto">
+          Enviar reporte
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <script type="module" src="../src/main.js"></script>
+</body>
+</html>
