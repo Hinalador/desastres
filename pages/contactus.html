@@ -1,130 +1,233 @@
 <!doctype html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reportar un desastre natural</title>
 </head>
+
 <body class="min-h-screen bg-gunmetal-50 text-gunmetal-900 dark:bg-gunmetal-950 dark:text-gunmetal-100">
   <header class="bg-gunmetal-900 px-4 py-3">
-      <div class="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <a href="/">
-          <img src="../src/Img/download.png" alt="Logo de Desastres Naturales"
-            class="h-16 w-16 transition-transform duration-200 ease-in-out hover:scale-110" />
-        </a>
-        <nav aria-label="Navegación principal">
-          <ul class="flex flex-wrap items-center gap-4 text-lg">
-            <li class="transition-transform duration-200 ease-in-out hover:scale-110">
-              <a href="/" class="text-gunmetal-50 hover:text-tropical-mint-400">
-                Inicio
-              </a>
-            </li>
-            <li class="transition-transform duration-200 ease-in-out hover:scale-110">
-              <a href="/about" class="text-gunmetal-50 hover:text-tropical-mint-400">
-                Acerca de
-              </a>
-            </li>
-            <li class="transition-transform duration-200 ease-in-out hover:scale-110">
-              <a href="/pages/contactus.html" class="text-gunmetal-50 hover:text-tropical-mint-400">
-                Contáctanos
-              </a>
-            </li>
-            <li>
-              <button id="theme-toggle" type="button" aria-label="Cambiar al modo oscuro" aria-pressed="false"
-                class="flex items-center gap-2 rounded-lg border border-gunmetal-500 px-3 py-2 text-base text-gunmetal-50 hover:border-tropical-mint-400 hover:text-tropical-mint-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tropical-mint-400">
-                <span id="theme-icon" aria-hidden="true">☾</span>
-                <span id="theme-label">Modo oscuro</span>
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <div class="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <a href="/">
+        <img src="../src/Img/download.png" alt="Logo de Desastres Naturales"
+          class="h-16 w-16 transition-transform duration-200 ease-in-out hover:scale-110" />
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul class="flex flex-wrap items-center gap-4 text-lg">
+          <li class="transition-transform duration-200 ease-in-out hover:scale-110">
+            <a href="/" class="text-gunmetal-50 hover:text-tropical-mint-400">
+              Inicio
+            </a>
+          </li>
+          <li class="transition-transform duration-200 ease-in-out hover:scale-110">
+            <a href="/about" class="text-gunmetal-50 hover:text-tropical-mint-400">
+              Acerca de
+            </a>
+          </li>
+          <li class="transition-transform duration-200 ease-in-out hover:scale-110">
+            <a href="/pages/contactus.html" class="text-gunmetal-50 hover:text-tropical-mint-400">
+              Contáctanos
+            </a>
+          </li>
+          <li>
+            <button id="theme-toggle" type="button" aria-label="Cambiar al modo oscuro" aria-pressed="false"
+              class="flex items-center gap-2 rounded-lg border border-gunmetal-500 px-3 py-2 text-base text-gunmetal-50 hover:border-tropical-mint-400 hover:text-tropical-mint-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tropical-mint-400">
+              <span id="theme-icon" aria-hidden="true">☾</span>
+              <span id="theme-label">Modo oscuro</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <main class="mx-auto max-w-3xl px-4 py-10">
-    <section class="rounded-lg bg-white p-6 shadow-md sm:p-8 dark:bg-gunmetal-900">
-      <h1 class="mb-2 text-3xl font-bold dark:text-gunmetal-50">Reportar un desastre natural</h1>
-      <p class="mb-6 text-gunmetal-700 dark:text-gunmetal-300">
-        Comparte la información que conoces para ayudar a identificar la situación.
-      </p>
+  <main class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:py-12">
+    <div class="grid gap-6 lg:grid-cols-[minmax(16rem,0.78fr)_minmax(0,1.5fr)] lg:items-start">
+      <aside class="rounded-lg bg-deep-teal-900 p-6 text-white shadow-md sm:p-8 dark:bg-deep-teal-950">
+        <p class="text-sm font-semibold uppercase tracking-wide text-tropical-mint-300">Centro de reportes</p>
+        <h1 class="mt-3 text-3xl font-bold">Tu información puede ayudar</h1>
+        <p class="mt-4 leading-7 text-gunmetal-100">
+          Comparte lo que observaste y dónde ocurrió. El equipo podrá revisar el reporte lo antes posible.
+        </p>
 
-      <div class="mb-6 rounded-md border border-red-400 bg-red-50 p-4 text-sm text-gunmetal-800 dark:border-red-700 dark:bg-red-950 dark:text-red-100">
-        Si hay peligro inmediato, comunícate con los servicios de emergencia de tu zona.
-      </div>
-
-      <form action="#" method="post" class="space-y-5">
-        <div>
-          <label for="tipo" class="mb-1 block font-medium">¿Qué desastre quieres reportar?</label>
-          <select id="tipo" name="tipo" required
-            class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400">
-            <option value="">Selecciona una opción</option>
-            <option value="incendio">Incendio forestal</option>
-            <option value="temblor">Temblor o sismo</option>
-            <option value="terremoto">Terremoto</option>
-            <option value="tsunami">Tsunami</option>
-            <option value="inundacion">Inundación</option>
-            <option value="deslizamiento">Deslizamiento de tierra</option>
-            <option value="erupcion">Erupción volcánica</option>
-            <option value="otro">Otro</option>
-          </select>
-        </div>
-
-        <div class="grid gap-5 sm:grid-cols-2">
-          <div>
-            <label for="fecha" class="mb-1 block font-medium">Día del desastre</label>
-            <input id="fecha" name="fecha" type="date" required
-              class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
-          </div>
-          <div>
-            <label for="hora" class="mb-1 block font-medium">Hora aproximada</label>
-            <input id="hora" name="hora" type="time" required
-              class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
-          </div>
-        </div>
-
-        <div>
-          <label for="ubicacion" class="mb-1 block font-medium">Ubicación</label>
-          <input id="ubicacion" name="ubicacion" type="text" placeholder="Ciudad, barrio o dirección de referencia" required
-            class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
-        </div>
-
-        <div>
-          <label for="descripcion" class="mb-1 block font-medium">¿Qué está ocurriendo?</label>
-          <textarea id="descripcion" name="descripcion" rows="4" placeholder="Describe brevemente lo que observaste"
-            required class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400"></textarea>
-        </div>
-
-        <div class="border-t border-gunmetal-200 pt-5">
-          <h2 class="mb-4 text-xl font-semibold dark:text-gunmetal-50">Tus datos de contacto</h2>
-          <div class="space-y-5">
+        <ol class="mt-8 space-y-6">
+          <li class="flex gap-4">
+            <span class="flex size-8 shrink-0 items-center justify-center rounded-full bg-tropical-mint-400 font-bold text-gunmetal-950">1</span>
             <div>
-              <label for="nombre" class="mb-1 block font-medium">Nombre</label>
-              <input id="nombre" name="nombre" type="text" autocomplete="name" required
-                class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
+              <h2 class="font-semibold">Ubica el evento</h2>
+              <p class="mt-1 text-sm leading-6 text-gunmetal-100">Busca una dirección o marca el punto exacto en el mapa.</p>
             </div>
-            <div class="grid gap-5 sm:grid-cols-2">
+          </li>
+          <li class="flex gap-4">
+            <span class="flex size-8 shrink-0 items-center justify-center rounded-full bg-tropical-mint-400 font-bold text-gunmetal-950">2</span>
+            <div>
+              <h2 class="font-semibold">Describe lo que ves</h2>
+              <p class="mt-1 text-sm leading-6 text-gunmetal-100">Incluye daños, riesgos visibles y una hora aproximada.</p>
+            </div>
+          </li>
+          <li class="flex gap-4">
+            <span class="flex size-8 shrink-0 items-center justify-center rounded-full bg-tropical-mint-400 font-bold text-gunmetal-950">3</span>
+            <div>
+              <h2 class="font-semibold">Mantente a salvo</h2>
+              <p class="mt-1 text-sm leading-6 text-gunmetal-100">No te acerques a la zona para obtener más información o tomar fotos.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="mt-8 border-t border-gunmetal-700 pt-6">
+          <p class="font-semibold text-tropical-mint-200">¿Hay peligro inmediato?</p>
+          <p class="mt-2 text-sm leading-6 text-gunmetal-100">
+            Este formulario es para registrar reportes de manera informativa. 
+          </p>
+        </div>
+      </aside>
+
+      <section class="rounded-lg bg-white p-5 shadow-md sm:p-8 dark:bg-gunmetal-900">
+        <div class="mb-6 flex flex-col gap-2 border-b border-gunmetal-200 pb-5 sm:flex-row sm:items-end sm:justify-between dark:border-gunmetal-700">
+          <div>
+            <p class="text-sm font-semibold text-red-500">Formulario de reporte</p>
+            <h2 class="mt-1 text-2xl font-bold dark:text-gunmetal-50">Cuéntanos qué ocurrió</h2>
+          </div>
+          <p class="text-sm text-gunmetal-600 dark:text-gunmetal-300">Los campos marcados con * son obligatorios.</p>
+        </div>
+
+        <div class="mb-6 rounded-md border border-red-300 bg-red-50 p-4 text-sm leading-6 text-gunmetal-800 dark:border-red-800 dark:bg-red-950 dark:text-red-100">
+          Si alguien está en peligro, contacta primero a los servicios de emergencia de tu zona.
+        </div>
+
+        <form action="#" method="post" class="space-y-6">
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label for="tipo" class="mb-1.5 block text-sm font-semibold">Tipo de evento <span aria-hidden="true">*</span></label>
+              <select id="tipo" name="tipo" required
+                class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2.5 text-gunmetal-900 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50">
+                <option value="">Selecciona una opción</option>
+                <option value="incendio">Incendio forestal</option>
+                <option value="temblor">Temblor o sismo</option>
+                <option value="terremoto">Terremoto</option>
+                <option value="tsunami">Tsunami</option>
+                <option value="inundacion">Inundación</option>
+                <option value="deslizamiento">Deslizamiento de tierra</option>
+                <option value="erupcion">Erupción volcánica</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div>
+              <label for="nivel" class="mb-1.5 block text-sm font-semibold">Nivel de afectación <span aria-hidden="true">*</span></label>
+              <select id="nivel" name="nivel" required
+                class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2.5 text-gunmetal-900 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50">
+                <option value="">Selecciona una opción</option>
+                <option value="bajo">Bajo: situación localizada</option>
+                <option value="moderado">Moderado: daños o riesgo en la zona</option>
+                <option value="alto">Alto: peligro extendido o personas en riesgo</option>
+                <option value="desconocido">No estoy seguro</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid gap-5 sm:grid-cols-3">
+            <div>
+              <label for="fecha" class="mb-1.5 block text-sm font-semibold">Fecha <span aria-hidden="true">*</span></label>
+              <input id="fecha" name="fecha" type="date" required
+                class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2.5 text-gunmetal-900 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50" />
+            </div>
+            <div>
+              <label for="hora" class="mb-1.5 block text-sm font-semibold">Hora aproximada <span aria-hidden="true">*</span></label>
+              <input id="hora" name="hora" type="time" required
+                class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2.5 text-gunmetal-900 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50" />
+            </div>
+            <div>
+              <label for="personas" class="mb-1.5 block text-sm font-semibold">Personas afectadas</label>
+              <input id="personas" name="personas" type="number" min="0" inputmode="numeric" placeholder="Si se conoce"
+                class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2.5 text-gunmetal-900 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50" />
+            </div>
+          </div>
+
+          <fieldset class="space-y-3">
+            <legend class="text-sm font-semibold">Ubicación del evento <span aria-hidden="true">*</span></legend>
+            <div class="flex flex-col gap-2 sm:flex-row">
+              <label for="map-search" class="sr-only">Buscar dirección o lugar</label>
+              <input id="map-search" type="search" placeholder="Busca una dirección, ciudad o lugar"
+                class="min-w-0 flex-1 rounded-md border border-gunmetal-300 bg-white px-3 py-2.5 text-gunmetal-900 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50" />
+              <button id="search-location" type="button"
+                class="rounded-md bg-gunmetal-800 px-4 py-2.5 font-semibold text-white hover:bg-gunmetal-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tropical-mint-500 dark:bg-gunmetal-700 dark:hover:bg-gunmetal-600">
+                Buscar lugar
+              </button>
+              <button id="use-current-location" type="button" aria-label="Usar mi ubicación actual" title="Usar mi ubicación actual"
+                class="flex size-11 shrink-0 items-center justify-center rounded-md border border-gunmetal-300 text-gunmetal-800 hover:bg-gunmetal-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tropical-mint-500 dark:border-gunmetal-600 dark:text-gunmetal-100 dark:hover:bg-gunmetal-800">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" class="size-5" stroke="currentColor" stroke-width="1.8">
+                  <circle cx="12" cy="12" r="7.5" />
+                  <circle cx="12" cy="12" r="2.5" />
+                  <path stroke-linecap="round" d="M12 2v2m0 16v2M2 12h2m16 0h2" />
+                </svg>
+              </button>
+            </div>
+
+            <div id="report-map" role="application" aria-label="Mapa interactivo para seleccionar la ubicación del evento"
+              class="h-72 w-full overflow-hidden rounded-md border border-gunmetal-300 bg-gunmetal-100 sm:h-80 dark:border-gunmetal-600"></div>
+            <p id="map-status" aria-live="polite" class="min-h-5 text-sm text-gunmetal-700 dark:text-gunmetal-300">
+              Busca un lugar o selecciona un punto directamente en el mapa.
+            </p>
+
+            <div>
+              <label for="ubicacion" class="mb-1.5 block text-sm font-semibold">Referencia de ubicación <span aria-hidden="true">*</span></label>
+              <input id="ubicacion" name="ubicacion" type="text" autocomplete="street-address"
+                placeholder="Dirección, barrio, municipio o referencia cercana" required
+                class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2.5 text-gunmetal-900 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50" />
+            </div>
+            <input id="latitud" name="latitud" type="hidden" />
+            <input id="longitud" name="longitud" type="hidden" />
+            <a id="google-maps-link" href="#" target="_blank" rel="noreferrer" hidden
+              class="inline-flex text-sm font-semibold text-deep-teal-700 underline decoration-1 underline-offset-4 hover:text-red-500 dark:text-tropical-mint-300">
+              Abrir este punto en Google Maps
+            </a>
+            <p class="text-xs leading-5 text-gunmetal-600 dark:text-gunmetal-400">
+              El mapa usa OpenStreetMap. La ubicación seleccionada se puede abrir en Google Maps.
+            </p>
+          </fieldset>
+
+          <div>
+            <label for="descripcion" class="mb-1.5 block text-sm font-semibold">Descripción del evento <span aria-hidden="true">*</span></label>
+            <textarea id="descripcion" name="descripcion" rows="4" maxlength="1200"
+              placeholder="¿Qué ocurrió?" required
+              class="w-full resize-y rounded-md border border-gunmetal-300 bg-white px-3 py-2.5 text-gunmetal-900 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50"></textarea>
+          </div>
+
+          <div class="border-t border-gunmetal-200 pt-5 dark:border-gunmetal-700">
+            <h3 class="text-lg font-semibold dark:text-gunmetal-50">Datos de contacto</h3>
+            <p class="mt-1 text-sm text-gunmetal-600 dark:text-gunmetal-300">Comparte para ponernos en contacto contigo</p>
+            <div class="mt-4 grid gap-5 sm:grid-cols-2">
               <div>
-                <label for="correo" class="mb-1 block font-medium">Correo electrónico</label>
-                <input id="correo" name="correo" type="email" autocomplete="email"
-                  class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
+                <label for="nombre" class="mb-1.5 block text-sm font-semibold">Nombre <span aria-hidden="true">*</span></label>
+                <input id="nombre" name="nombre" type="text" autocomplete="name" required
+                  class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2.5 text-gunmetal-900 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50" />
               </div>
               <div>
-                <label for="telefono" class="mb-1 block font-medium">Teléfono (opcional)</label>
-                <input id="telefono" name="telefono" type="tel" autocomplete="tel"
-                  class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400" />
+                <label for="telefono" class="mb-1.5 block text-sm font-semibold">Teléfono</label>
+                <input id="telefono" name="telefono" type="tel" autocomplete="tel" placeholder="123"
+                  class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2.5 text-gunmetal-900 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50" />
+              </div>
+              <div class="sm:col-span-2">
+                <label for="correo" class="mb-1.5 block text-sm font-semibold">Correo electrónico (opcional)</label>
+                <input id="correo" name="correo" type="email" autocomplete="email" placeholder="example@desastres.com"
+                  class="w-full rounded-md border border-gunmetal-300 bg-white px-3 py-2.5 text-gunmetal-900 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50" />
               </div>
             </div>
           </div>
-        </div>
 
-        <button type="submit"
-          class="w-full rounded-md bg-red-400 px-4 py-3 font-semibold text-white hover:bg-red-500 sm:w-auto">
-          Enviar reporte
-        </button>
-      </form>
-    </section>
+          <button type="submit"
+            class="w-full rounded-md bg-red-500 px-5 py-3 font-semibold text-white transition-colors hover:bg-red-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-500 sm:w-auto">
+            Enviar reporte
+          </button>
+        </form>
+      </section>
+    </div>
   </main>
 
   <script type="module" src="../src/main.js"></script>
+  <script type="module" src="../src/contact-map.js"></script>
 </body>
+
 </html>
