@@ -19,6 +19,8 @@ Sitio web informativo en español para aprender sobre fenómenos naturales, cono
 ## Funciones
 
 - Página principal con introducción y guías breves sobre terremotos, inundaciones y tsunamis, incendios forestales y erupciones volcánicas.
+- Página “Acerca de” con el propósito, alcance y límites educativos del sitio.
+- Guía de prevención paso a paso en un modal, con imágenes, precauciones generales y canales de comunicación. Los números y las alertas dependen de las autoridades de cada localidad.
 - Tarjetas informativas interactivas y navegación por temas.
 - Casos históricos ilustrados: tsunami de Japón de 2011, terremoto de San Francisco de 1906 y erupción del Tambora de 1815.
 - Formulario para describir un evento, su fecha, hora, ubicación, afectación y datos de contacto.
@@ -97,6 +99,7 @@ npm run preview
 desastres/
 ├── index.html              # Página principal
 ├── pages/
+│   ├── about.html          # Propósito, alcance y límites del sitio
 │   └── contactus.html      # Formulario de reporte
 ├── src/
 │   ├── contact-map.js      # Mapa, búsqueda y selección de ubicación
