@@ -2,6 +2,115 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 500ms ease, visibility 100ms ease;
+}
+
+.hero-slide[aria-hidden="false"] {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hero-slide-image,
+.hero-slide-overlay {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.hero-slide-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-slide-overlay {
+  background: linear-gradient(90deg, rgb(16 19 19 / 85%) 0%, rgb(16 19 19 / 55%) 60%, rgb(16 19 19 / 25%) 100%);
+}
+
+.hero-slide-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 6rem 1.5rem;
+}
+
+.hero-carousel-controls {
+  position: absolute;
+  z-index: 2;
+  inset: auto 0 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+  margin-inline: max(1.5rem, calc((100% - 72rem) / 2));
+}
+
+.hero-carousel-arrow {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 24%);
+  border-radius: 9999px;
+  background: rgb(16 19 19 / 30%);
+  color: rgb(255 255 255 / 88%);
+  line-height: 1;
+  transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+
+.hero-carousel-arrow svg {
+  display: block;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.hero-carousel-arrow:hover,
+.hero-carousel-arrow:focus-visible {
+  border-color: rgb(255 255 255 / 50%);
+  background: rgb(16 19 19 / 55%);
+  color: white;
+}
+
+.hero-carousel-dot {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 9999px;
+  background: rgb(255 255 255 / 55%);
+  transition: background-color 200ms ease, transform 200ms ease;
+}
+
+.hero-carousel-dot[aria-current="true"] {
+  transform: scale(1.25);
+  background: #78edc8;
+}
+
+#hero-carousel:focus-visible,
+.hero-carousel-controls button:focus-visible {
+  outline: 3px solid #78edc8;
+  outline-offset: 4px;
+}
+
+@media (min-width: 640px) {
+  .hero-slide-content {
+    padding-inline: max(1.5rem, calc((100% - 72rem) / 2));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide,
+  .hero-carousel-arrow,
+  .hero-carousel-dot {
+    transition-duration: 0ms;
+  }
+}
+
 .flip-card {
   display: block;
   border-radius: 1rem;

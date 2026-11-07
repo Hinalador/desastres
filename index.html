@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/style.css" />
   <title>Desastres Naturales</title>
 </head>
 
@@ -42,21 +43,84 @@
       </div>
     </header>
     <main>
-      <section aria-labelledby="welcome-title" class="relative isolate flex min-h-[70vh] items-center justify-center overflow-hidden bg-gunmetal-900 px-6 py-24 text-center sm:min-h-[75vh]">
-        <img src="/src/Img/wallhaven-43plly_1920x1080.png" alt=""
-          class="absolute inset-0 -z-20 h-full w-full object-cover object-center" />
-        <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gunmetal-950/60"></div>
-        <div class="mx-auto max-w-3xl text-white">
-          <p class="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-tropical-mint-300 sm:text-base">
-            Información y prevención
-          </p>
-          <h1 id="welcome-title" class="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-            Bienvenido a Desastres Naturales
-          </h1>
-          <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gunmetal-50 sm:text-xl">
-            Somos una página dedicada a informar sobre los desastres naturales, explicar sus causas y efectos, y compartir
-            recomendaciones para que tú y tu comunidad puedan prepararse y actuar con mayor seguridad.
-          </p>
+      <section id="hero-carousel" aria-label="Información sobre desastres naturales" aria-roledescription="carrusel" tabindex="0"
+        class="relative isolate min-h-[70vh] overflow-hidden bg-gunmetal-900 sm:min-h-[75vh]">
+        <article class="hero-slide" aria-roledescription="diapositiva" aria-label="1 de 3" aria-hidden="false">
+          <img src="/src/Img/wallhaven-43plly_1920x1080.png" alt="" class="hero-slide-image" />
+          <div aria-hidden="true" class="hero-slide-overlay"></div>
+          <div class="hero-slide-content">
+            <div class="max-w-3xl text-left text-white">
+              <p class="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-tropical-mint-300 sm:text-base">
+                Información y prevención
+              </p>
+              <h1 id="welcome-title" class="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+                Bienvenido a Desastres Naturales
+              </h1>
+              <p class="mt-6 max-w-2xl text-lg leading-relaxed text-gunmetal-50 sm:text-xl">
+                Somos una página dedicada a informar sobre los desastres naturales, explicar sus causas y efectos, y compartir
+                recomendaciones para que tú y tu comunidad puedan prepararse y actuar con mayor seguridad.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="hero-slide" aria-roledescription="diapositiva" aria-label="2 de 3" aria-hidden="true">
+          <img src="/src/Img/5.png" alt="Daños en una comunidad después de un terremoto" class="hero-slide-image" />
+          <div aria-hidden="true" class="hero-slide-overlay"></div>
+          <div class="hero-slide-content">
+            <div class="max-w-3xl text-left text-white">
+              <p class="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-tropical-mint-300 sm:text-base">
+                Prepárate antes del sismo
+              </p>
+              <h2 class="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+                Terremotos: protégete y actúa
+              </h2>
+              <p class="mt-6 max-w-2xl text-lg leading-relaxed text-gunmetal-50 sm:text-xl">
+                Identifica zonas seguras, prepara una mochila de emergencia y acuerda un punto de encuentro. Durante un sismo, agáchate, cúbrete y sujétate.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="hero-slide" aria-roledescription="diapositiva" aria-label="3 de 3" aria-hidden="true">
+          <img src="/src/Img/8.png" alt="Deslizamiento de tierra que afecta una zona montañosa" class="hero-slide-image" />
+          <div aria-hidden="true" class="hero-slide-overlay"></div>
+          <div class="hero-slide-content">
+            <div class="max-w-3xl text-left text-white">
+              <p class="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-tropical-mint-300 sm:text-base">
+                Reconoce las señales de riesgo
+              </p>
+              <h2 class="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+                Deslizamientos e inundaciones
+              </h2>
+              <p class="mt-6 max-w-2xl text-lg leading-relaxed text-gunmetal-50 sm:text-xl">
+                Lluvias intensas pueden volver inestables las laderas y elevar el nivel de los ríos. Aléjate de cauces y pendientes inestables, y sigue las alertas locales.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <div class="hero-carousel-controls" aria-label="Controles del carrusel">
+          <button type="button" data-carousel-prev aria-label="Diapositiva anterior" title="Diapositiva anterior"
+            class="hero-carousel-arrow">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5m7 7-7-7 7-7" />
+            </svg>
+          </button>
+          <div class="flex items-center gap-2" aria-label="Elegir diapositiva">
+            <button type="button" data-carousel-slide="0" aria-label="Ir a la diapositiva 1" aria-current="true"
+              class="hero-carousel-dot"></button>
+            <button type="button" data-carousel-slide="1" aria-label="Ir a la diapositiva 2" aria-current="false"
+              class="hero-carousel-dot"></button>
+            <button type="button" data-carousel-slide="2" aria-label="Ir a la diapositiva 3" aria-current="false"
+              class="hero-carousel-dot"></button>
+          </div>
+          <button type="button" data-carousel-next aria-label="Siguiente diapositiva" title="Siguiente diapositiva"
+            class="hero-carousel-arrow">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14m-7-7 7 7-7 7" />
+            </svg>
+          </button>
         </div>
       </section>
       <section aria-label="Reportar un desastre" class="px-4 py-8 sm:px-6 lg:px-8">
