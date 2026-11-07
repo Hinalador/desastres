@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Conoce el propósito, alcance y límites educativos de Desastres Naturales." />
+  <link rel="stylesheet" href="/src/style.css" />
+  <title>Acerca de | Desastres Naturales</title>
+</head>
+
+<body class="min-h-screen bg-gunmetal-50 text-gunmetal-900 dark:bg-gunmetal-950 dark:text-gunmetal-100">
+  <header class="bg-gunmetal-900 px-4 py-3">
+    <div class="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <a href="/">
+        <img src="../src/Img/download.png" alt="Logo de Desastres Naturales"
+          class="h-16 w-16 transition-transform duration-200 ease-in-out hover:scale-110" />
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul class="flex flex-wrap items-center gap-4 text-lg">
+          <li class="transition-transform duration-200 ease-in-out hover:scale-110">
+            <a href="/" class="text-gunmetal-50 hover:text-tropical-mint-400">Inicio</a>
+          </li>
+          <li class="transition-transform duration-200 ease-in-out hover:scale-110">
+            <a href="/pages/about.html" aria-current="page" class="text-tropical-mint-400">Acerca de</a>
+          </li>
+          <li class="transition-transform duration-200 ease-in-out hover:scale-110">
+            <a href="/pages/contactus.html" class="text-gunmetal-50 hover:text-tropical-mint-400">Contáctanos</a>
+          </li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" type="button" aria-label="Cambiar al modo oscuro" aria-pressed="false"
+        title="Cambiar tema"
+        class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gunmetal-500 text-2xl text-gunmetal-50 hover:border-tropical-mint-400 hover:text-tropical-mint-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tropical-mint-400">
+        <span id="theme-icon" aria-hidden="true">☾</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:py-16">
+    <section aria-labelledby="about-title" class="rounded-2xl bg-white p-6 shadow-sm dark:bg-gunmetal-900 sm:p-10">
+      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-deep-teal-700 dark:text-tropical-mint-300">
+        Información del sitio
+      </p>
+      <h1 id="about-title" class="mt-3 text-4xl font-bold tracking-tight text-gunmetal-900 dark:text-gunmetal-50">
+        Acerca de Desastres Naturales
+      </h1>
+      <p class="mt-6 max-w-3xl text-lg leading-relaxed text-gunmetal-700 dark:text-gunmetal-300">
+        Desastres Naturales es un sitio educativo en español que reúne información introductoria sobre fenómenos naturales, sus impactos y algunas medidas generales de preparación. Su propósito es ayudar a comprender estos riesgos y animar a las personas a prepararse junto con su comunidad.
+      </p>
+
+      <div class="mt-10 grid gap-8 md:grid-cols-2">
+        <article>
+          <h2 class="text-2xl font-bold text-gunmetal-900 dark:text-gunmetal-50">Qué encontrarás aquí</h2>
+          <ul class="mt-4 list-inside list-disc space-y-3 leading-relaxed text-gunmetal-700 dark:text-gunmetal-300">
+            <li>Explicaciones breves sobre terremotos, inundaciones, tsunamis, incendios forestales y erupciones volcánicas.</li>
+            <li>Recomendaciones generales para prepararte y actuar ante distintos peligros.</li>
+            <li>Ejemplos históricos con referencias para ampliar la información.</li>
+          </ul>
+        </article>
+        <article>
+          <h2 class="text-2xl font-bold text-gunmetal-900 dark:text-gunmetal-50">Fuentes y alcance</h2>
+          <p class="mt-4 leading-relaxed text-gunmetal-700 dark:text-gunmetal-300">
+            Las referencias disponibles se muestran junto a algunos contenidos y casos históricos. Las recomendaciones son orientativas: las amenazas y las instrucciones pueden variar de un lugar a otro, así que verifica la información con los organismos oficiales de tu localidad.
+          </p>
+        </article>
+      </div>
+
+      <aside class="mt-10 rounded-xl border border-red-300 bg-red-50 p-5 dark:border-red-800 dark:bg-red-950">
+        <h2 class="text-xl font-bold text-gunmetal-900 dark:text-red-100">Lo que este sitio no es</h2>
+        <p class="mt-3 leading-relaxed text-gunmetal-800 dark:text-red-100">
+          No somos un organismo de emergencias y este sitio no ofrece alertas en tiempo real ni sustituye las instrucciones de las autoridades. El formulario de reporte es una demostración: no envía ni guarda información. Si hay peligro, comunícate directamente con los servicios de emergencia de tu zona por sus canales oficiales.
+        </p>
+      </aside>
+
+      <div id="prevencion" class="mt-8 flex flex-wrap gap-3">
+        <button id="prevention-open" type="button"
+          class="inline-flex items-center justify-center rounded-lg bg-deep-teal-700 px-5 py-3 font-bold text-white transition-colors hover:bg-deep-teal-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-deep-teal-700 dark:bg-tropical-mint-400 dark:text-gunmetal-950 dark:hover:bg-tropical-mint-300">
+          Guía de prevención paso a paso
+        </button>
+        <a href="/"
+          class="inline-flex items-center justify-center rounded-lg border border-gunmetal-300 px-5 py-3 font-bold text-gunmetal-800 transition-colors hover:bg-gunmetal-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-deep-teal-700 dark:border-gunmetal-600 dark:text-gunmetal-100 dark:hover:bg-gunmetal-800">
+          Volver al inicio
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="prevention-dialog" aria-labelledby="prevention-title"
+    class="m-auto max-h-[92vh] w-[min(94vw,60rem)] overflow-y-auto rounded-2xl bg-gunmetal-50 p-0 text-gunmetal-900 shadow-2xl backdrop:bg-gunmetal-950/75 dark:bg-gunmetal-950 dark:text-gunmetal-100">
+    <div class="sticky top-0 z-10 flex items-center justify-between gap-4 border-b border-gunmetal-200 bg-gunmetal-50 px-5 py-4 dark:border-gunmetal-800 dark:bg-gunmetal-950 sm:px-7">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-deep-teal-700 dark:text-tropical-mint-300">Guía interactiva</p>
+        <h2 id="prevention-title" class="mt-1 text-xl font-bold sm:text-2xl">Prepárate paso a paso</h2>
+      </div>
+      <button id="prevention-close" type="button" aria-label="Cerrar guía"
+        class="flex size-10 shrink-0 items-center justify-center rounded-full border border-gunmetal-300 text-2xl leading-none hover:bg-gunmetal-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-deep-teal-700 dark:border-gunmetal-700 dark:hover:bg-gunmetal-800">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div class="px-5 pb-6 pt-5 sm:px-7 sm:pb-7">
+      <div class="mb-5">
+        <p id="prevention-progress-label" aria-live="polite" class="mb-2 text-sm font-semibold text-gunmetal-700 dark:text-gunmetal-300">Paso 1 de 5</p>
+        <div class="h-2 overflow-hidden rounded-full bg-gunmetal-200 dark:bg-gunmetal-800">
+          <div id="prevention-progress" class="h-full rounded-full bg-deep-teal-700 transition-[width] duration-300 dark:bg-tropical-mint-400" style="width: 20%"></div>
+        </div>
+        <nav aria-label="Pasos de la guía" class="mt-4 flex flex-wrap gap-2">
+          <button type="button" data-prevention-jump="0" aria-label="Ir al paso 1: Prepárate" aria-current="step" class="prevention-step-button">1</button>
+          <button type="button" data-prevention-jump="1" aria-label="Ir al paso 2: Sismos y agua" class="prevention-step-button">2</button>
+          <button type="button" data-prevention-jump="2" aria-label="Ir al paso 3: Fuego y tormentas" class="prevention-step-button">3</button>
+          <button type="button" data-prevention-jump="3" aria-label="Ir al paso 4: Volcanes y deslizamientos" class="prevention-step-button">4</button>
+          <button type="button" data-prevention-jump="4" aria-label="Ir al paso 5: Comunícate y mantente a salvo" class="prevention-step-button">5</button>
+        </nav>
+      </div>
+
+      <section data-prevention-panel aria-labelledby="prevention-step-1" class="space-y-5">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-wide text-deep-teal-700 dark:text-tropical-mint-300">Antes de una emergencia</p>
+          <h3 id="prevention-step-1" class="mt-1 text-2xl font-bold">1. Prepárate con anticipación</h3>
+        </div>
+        <div class="grid gap-5 md:grid-cols-[1.1fr_1fr] md:items-center">
+          <img src="/src/Img/5.png" alt="Zona urbana con daños después de un desastre" class="h-52 w-full rounded-xl object-cover sm:h-64" />
+          <ul class="space-y-3 leading-relaxed text-gunmetal-700 dark:text-gunmetal-300">
+            <li><strong class="text-gunmetal-900 dark:text-gunmetal-50">Conoce tus riesgos:</strong> identifica los peligros y refugios de tu comunidad.</li>
+            <li><strong class="text-gunmetal-900 dark:text-gunmetal-50">Acuerda un plan:</strong> define rutas de salida, un punto de encuentro y cómo ayudar a niños, personas mayores, personas con discapacidad y mascotas.</li>
+            <li><strong class="text-gunmetal-900 dark:text-gunmetal-50">Prepara suministros:</strong> organiza agua, alimentos, medicamentos, linterna, radio y baterías según las recomendaciones locales.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section data-prevention-panel aria-labelledby="prevention-step-2" class="hidden space-y-5">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-wide text-deep-teal-700 dark:text-tropical-mint-300">Sismos y agua</p>
+          <h3 id="prevention-step-2" class="mt-1 text-2xl font-bold">2. Aléjate del peligro</h3>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2">
+          <article class="overflow-hidden rounded-xl bg-white shadow-sm dark:bg-gunmetal-900">
+            <img src="/src/Img/4.png" alt="Daños en edificios y calles después de un terremoto" class="h-40 w-full object-cover" />
+            <div class="p-4">
+              <h4 class="text-lg font-bold">Terremotos</h4>
+              <p class="mt-2 leading-relaxed text-gunmetal-700 dark:text-gunmetal-300">Agáchate, cúbrete y sujétate; protégete de ventanas y objetos que puedan caer. Después, aléjate de edificios dañados, prepárate para réplicas y sigue las indicaciones oficiales.</p>
+            </div>
+          </article>
+          <article class="overflow-hidden rounded-xl bg-white shadow-sm dark:bg-gunmetal-900">
+            <img src="/src/Img/6.png" alt="Ola de gran tamaño acercándose a una zona costera" class="h-40 w-full object-cover" />
+            <div class="p-4">
+              <h4 class="text-lg font-bold">Inundaciones y tsunamis</h4>
+              <p class="mt-2 leading-relaxed text-gunmetal-700 dark:text-gunmetal-300">No camines ni conduzcas por agua de inundación; aléjate de ríos y busca terreno alto si se indica. En la costa, un sismo fuerte o prolongado es una señal natural de tsunami: sube a terreno elevado sin esperar una alerta y regresa solo cuando las autoridades lo indiquen.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section data-prevention-panel aria-labelledby="prevention-step-3" class="hidden space-y-5">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-wide text-deep-teal-700 dark:text-tropical-mint-300">Fuego y clima severo</p>
+          <h3 id="prevention-step-3" class="mt-1 text-2xl font-bold">3. Sigue las alertas y evacúa a tiempo</h3>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2">
+          <article class="overflow-hidden rounded-xl bg-white shadow-sm dark:bg-gunmetal-900">
+            <img src="/src/Img/2.png" alt="Incendio forestal avanzando entre árboles" class="h-40 w-full object-cover" />
+            <div class="p-4">
+              <h4 class="text-lg font-bold">Incendios forestales</h4>
+              <p class="mt-2 leading-relaxed text-gunmetal-700 dark:text-gunmetal-300">Mantente atento a las alertas y prepara una ruta de salida. Si se ordena evacuar, hazlo de inmediato por las rutas indicadas; no regreses hasta recibir autorización.</p>
+            </div>
+          </article>
+          <article class="overflow-hidden rounded-xl bg-white shadow-sm dark:bg-gunmetal-900">
+            <img src="/src/Img/3.png" alt="Tormenta eléctrica con rayos en el cielo" class="h-40 w-full object-cover" />
+            <div class="p-4">
+              <h4 class="text-lg font-bold">Huracanes y tormentas severas</h4>
+              <p class="mt-2 leading-relaxed text-gunmetal-700 dark:text-gunmetal-300">Sigue los avisos meteorológicos oficiales, conoce tu ruta y refugio, y prepara suministros. Si se ordena evacuar, sal pronto; durante vientos intensos, busca resguardo lejos de ventanas.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section data-prevention-panel aria-labelledby="prevention-step-4" class="hidden space-y-5">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-wide text-deep-teal-700 dark:text-tropical-mint-300">Terreno y volcanes</p>
+          <h3 id="prevention-step-4" class="mt-1 text-2xl font-bold">4. Respeta las zonas de riesgo</h3>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2">
+          <article class="overflow-hidden rounded-xl bg-white shadow-sm dark:bg-gunmetal-900">
+            <img src="/src/Img/7.png" alt="Volcán en erupción durante la noche" class="h-40 w-full object-cover" />
+            <div class="p-4">
+              <h4 class="text-lg font-bold">Erupciones volcánicas</h4>
+              <p class="mt-2 leading-relaxed text-gunmetal-700 dark:text-gunmetal-300">Respeta las zonas restringidas y evacúa cuando se indique. Si cae ceniza, sigue las instrucciones oficiales de protección y no te acerques al volcán ni a cauces por donde puedan bajar flujos.</p>
+            </div>
+          </article>
+          <article class="overflow-hidden rounded-xl bg-white shadow-sm dark:bg-gunmetal-900">
+            <img src="/src/Img/8.png" alt="Deslizamiento de tierra que afecta una zona montañosa" class="h-40 w-full object-cover" />
+            <div class="p-4">
+              <h4 class="text-lg font-bold">Deslizamientos</h4>
+              <p class="mt-2 leading-relaxed text-gunmetal-700 dark:text-gunmetal-300">Si observas grietas nuevas, árboles inclinados o escuchas ruidos inusuales, aléjate de la pendiente y los cauces. Avisa a las autoridades y no cruces el área afectada.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section data-prevention-panel aria-labelledby="prevention-step-5" class="hidden space-y-5">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-wide text-deep-teal-700 dark:text-tropical-mint-300">Pide ayuda y mantén el contacto</p>
+          <h3 id="prevention-step-5" class="mt-1 text-2xl font-bold">5. Comunícate por canales oficiales</h3>
+        </div>
+        <div class="grid gap-5 md:grid-cols-[1.1fr_1fr] md:items-center">
+          <img src="/src/Img/5.png" alt="Daños en una comunidad que pueden afectar servicios y comunicaciones" class="h-52 w-full rounded-xl object-cover sm:h-64" />
+          <ul class="space-y-3 leading-relaxed text-gunmetal-700 dark:text-gunmetal-300">
+            <li><strong class="text-gunmetal-900 dark:text-gunmetal-50">Peligro inmediato:</strong> llama al número de emergencias de tu país o localidad. El número varía en las Américas; averígualo y guárdalo antes de una emergencia.</li>
+            <li><strong class="text-gunmetal-900 dark:text-gunmetal-50">Alertas:</strong> consulta protección civil o gestión de riesgos, el gobierno local y los servicios meteorológicos o geológicos oficiales.</li>
+            <li><strong class="text-gunmetal-900 dark:text-gunmetal-50">Si falla Internet o se satura la red:</strong> escucha radio local con batería, intenta enviar mensajes de texto y conserva la batería del teléfono.</li>
+            <li><strong class="text-gunmetal-900 dark:text-gunmetal-50">Plan familiar:</strong> acuerda un punto de encuentro y una persona de contacto fuera de la zona; guarda los teléfonos importantes también en papel.</li>
+          </ul>
+        </div>
+        <aside class="rounded-xl border border-red-300 bg-red-50 p-4 text-gunmetal-900 dark:border-red-800 dark:bg-red-950 dark:text-red-100">
+          <strong>Recuerda:</strong> este sitio no ofrece alertas en tiempo real. Su formulario es una demostración y no envía avisos a los servicios de emergencia.
+        </aside>
+      </section>
+
+      <div class="mt-7 flex items-center justify-between gap-3 border-t border-gunmetal-200 pt-5 dark:border-gunmetal-800">
+        <button id="prevention-previous" type="button" disabled
+          class="rounded-lg border border-gunmetal-300 px-4 py-2.5 font-semibold hover:bg-gunmetal-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-deep-teal-700 disabled:cursor-not-allowed disabled:opacity-40 dark:border-gunmetal-700 dark:hover:bg-gunmetal-800">
+          Anterior
+        </button>
+        <button id="prevention-next" type="button"
+          class="rounded-lg bg-deep-teal-700 px-5 py-2.5 font-bold text-white hover:bg-deep-teal-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-deep-teal-700 dark:bg-tropical-mint-400 dark:text-gunmetal-950 dark:hover:bg-tropical-mint-300">
+          Siguiente
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="bg-gunmetal-900 px-4 py-3">
+    <div class="mx-auto max-w-6xl text-center text-gunmetal-50">
+      &copy; 2026 Desastres Naturales.
+    </div>
+  </footer>
+  <script type="module" src="../src/main.js"></script>
+</body>
+
+</html>

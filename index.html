@@ -4,11 +4,354 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>desastres</title>
+  <link rel="stylesheet" href="/src/style.css" />
+  <title>Desastres Naturales</title>
 </head>
 
-<body>
-  <div id="app"></div>
+<body class="min-h-screen bg-gunmetal-50 text-gunmetal-900 dark:bg-gunmetal-950 dark:text-gunmetal-100">
+  <div id="app">
+    <header class="bg-gunmetal-900 px-4 py-3">
+      <div class="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <a href="./index.html">
+          <img src="./src/Img/download.png" alt="Logo de Desastres Naturales"
+            class="h-16 w-16 transition-transform duration-200 ease-in-out hover:scale-110" />
+        </a>
+        <nav aria-label="Navegación principal">
+          <ul class="flex flex-wrap items-center gap-4 text-lg">
+            <li class="transition-transform duration-200 ease-in-out hover:scale-110">
+              <a href="./index.html" class="text-gunmetal-50 hover:text-tropical-mint-400">
+                Inicio
+              </a>
+            </li>
+            <li class="transition-transform duration-200 ease-in-out hover:scale-110">
+              <a href="./pages/about.html" class="text-gunmetal-50 hover:text-tropical-mint-400">
+                Acerca de
+              </a>
+            </li>
+            <li class="transition-transform duration-200 ease-in-out hover:scale-110">
+              <a href="./pages/contactus.html" class="text-gunmetal-50 hover:text-tropical-mint-400">
+                Contáctanos
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" type="button" aria-label="Cambiar al modo oscuro" aria-pressed="false"
+          title="Cambiar tema"
+          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gunmetal-500 text-2xl text-gunmetal-50 hover:border-tropical-mint-400 hover:text-tropical-mint-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tropical-mint-400">
+          <span id="theme-icon" aria-hidden="true">☾</span>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section id="hero-carousel" aria-label="Información sobre desastres naturales" aria-roledescription="carrusel" tabindex="0"
+        class="relative isolate min-h-[70vh] overflow-hidden bg-gunmetal-900 sm:min-h-[75vh]">
+        <article class="hero-slide" aria-roledescription="diapositiva" aria-label="1 de 3" aria-hidden="false">
+          <img src="/src/Img/wallhaven-43plly_1920x1080.png" alt="" class="hero-slide-image" />
+          <div aria-hidden="true" class="hero-slide-overlay"></div>
+          <div class="hero-slide-content">
+            <div class="max-w-3xl text-left text-white">
+              <p class="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-tropical-mint-300 sm:text-base">
+                Información y prevención
+              </p>
+              <h1 id="welcome-title" class="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+                Bienvenido a Desastres Naturales
+              </h1>
+              <p class="mt-6 max-w-2xl text-lg leading-relaxed text-gunmetal-50 sm:text-xl">
+                Somos una página dedicada a informar sobre los desastres naturales, explicar sus causas y efectos, y compartir
+                recomendaciones para que tú y tu comunidad puedan prepararse y actuar con mayor seguridad.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="hero-slide" aria-roledescription="diapositiva" aria-label="2 de 3" aria-hidden="true">
+          <img src="/src/Img/5.png" alt="Daños en una comunidad después de un terremoto" class="hero-slide-image" />
+          <div aria-hidden="true" class="hero-slide-overlay"></div>
+          <div class="hero-slide-content">
+            <div class="max-w-3xl text-left text-white">
+              <p class="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-tropical-mint-300 sm:text-base">
+                Prepárate antes del sismo
+              </p>
+              <h2 class="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+                Terremotos: protégete y actúa
+              </h2>
+              <p class="mt-6 max-w-2xl text-lg leading-relaxed text-gunmetal-50 sm:text-xl">
+                Identifica zonas seguras, prepara una mochila de emergencia y acuerda un punto de encuentro. Durante un sismo, agáchate, cúbrete y sujétate.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="hero-slide" aria-roledescription="diapositiva" aria-label="3 de 3" aria-hidden="true">
+          <img src="/src/Img/8.png" alt="Deslizamiento de tierra que afecta una zona montañosa" class="hero-slide-image" />
+          <div aria-hidden="true" class="hero-slide-overlay"></div>
+          <div class="hero-slide-content">
+            <div class="max-w-3xl text-left text-white">
+              <p class="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-tropical-mint-300 sm:text-base">
+                Reconoce las señales de riesgo
+              </p>
+              <h2 class="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+                Deslizamientos e inundaciones
+              </h2>
+              <p class="mt-6 max-w-2xl text-lg leading-relaxed text-gunmetal-50 sm:text-xl">
+                Lluvias intensas pueden volver inestables las laderas y elevar el nivel de los ríos. Aléjate de cauces y pendientes inestables, y sigue las alertas locales.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <div class="hero-carousel-controls" aria-label="Controles del carrusel">
+          <button type="button" data-carousel-prev aria-label="Diapositiva anterior" title="Diapositiva anterior"
+            class="hero-carousel-arrow">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5m7 7-7-7 7-7" />
+            </svg>
+          </button>
+          <div class="flex items-center gap-2" aria-label="Elegir diapositiva">
+            <button type="button" data-carousel-slide="0" aria-label="Ir a la diapositiva 1" aria-current="true"
+              class="hero-carousel-dot"></button>
+            <button type="button" data-carousel-slide="1" aria-label="Ir a la diapositiva 2" aria-current="false"
+              class="hero-carousel-dot"></button>
+            <button type="button" data-carousel-slide="2" aria-label="Ir a la diapositiva 3" aria-current="false"
+              class="hero-carousel-dot"></button>
+          </div>
+          <button type="button" data-carousel-next aria-label="Siguiente diapositiva" title="Siguiente diapositiva"
+            class="hero-carousel-arrow">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14m-7-7 7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section aria-label="Reportar un desastre" class="px-4 py-8 sm:px-6 lg:px-8">
+        <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 rounded-2xl bg-tropical-mint-50 p-6 text-center dark:bg-gunmetal-900 sm:flex-row sm:text-left">
+          <p class="text-lg font-semibold text-gunmetal-900 dark:text-gunmetal-50">
+            ¿Quieres reportar un desastre?
+          </p>
+          <a href="./pages/contactus.html"
+            class="inline-flex items-center justify-center rounded-lg bg-deep-teal-700 px-6 py-3 font-bold text-white transition-colors hover:bg-deep-teal-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-deep-teal-700 dark:bg-tropical-mint-400 dark:text-gunmetal-950 dark:hover:bg-tropical-mint-300">
+            Ir al formulario
+          </a>
+        </div>
+      </section>
+      <section aria-labelledby="topics-title" class="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-12 lg:px-8 lg:py-16">
+        <aside class="h-fit rounded-2xl bg-white p-5 shadow-sm dark:bg-gunmetal-900 lg:sticky lg:top-6">
+          <h2 class="mb-4 text-lg font-bold text-gunmetal-900 dark:text-gunmetal-50">Explora los temas</h2>
+          <nav aria-label="Temas sobre desastres naturales">
+            <ul class="space-y-2">
+              <li>
+                <a href="#terremotos" class="block rounded-lg px-3 py-2 text-gunmetal-700 hover:bg-gunmetal-50 hover:text-deep-teal-700 focus-visible:outline-2 focus-visible:outline-deep-teal-700 dark:text-gunmetal-200 dark:hover:bg-gunmetal-800 dark:hover:text-tropical-mint-300">
+                  Terremotos
+                </a>
+              </li>
+              <li>
+                <a href="#inundaciones" class="block rounded-lg px-3 py-2 text-gunmetal-700 hover:bg-gunmetal-50 hover:text-deep-teal-700 focus-visible:outline-2 focus-visible:outline-deep-teal-700 dark:text-gunmetal-200 dark:hover:bg-gunmetal-800 dark:hover:text-tropical-mint-300">
+                  Inundaciones y tsunamis
+                </a>
+              </li>
+              <li>
+                <a href="#incendios" class="block rounded-lg px-3 py-2 text-gunmetal-700 hover:bg-gunmetal-50 hover:text-deep-teal-700 focus-visible:outline-2 focus-visible:outline-deep-teal-700 dark:text-gunmetal-200 dark:hover:bg-gunmetal-800 dark:hover:text-tropical-mint-300">
+                  Incendios forestales
+                </a>
+              </li>
+              <li>
+                <a href="#volcanes" class="block rounded-lg px-3 py-2 text-gunmetal-700 hover:bg-gunmetal-50 hover:text-deep-teal-700 focus-visible:outline-2 focus-visible:outline-deep-teal-700 dark:text-gunmetal-200 dark:hover:bg-gunmetal-800 dark:hover:text-tropical-mint-300">
+                  Erupciones volcánicas
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="mt-6 rounded-xl bg-tropical-mint-50 p-4 dark:bg-gunmetal-800">
+            <p class="text-sm leading-relaxed text-gunmetal-700 dark:text-gunmetal-200">
+              Conocer los riesgos de tu zona ayuda a prepararte. Sigue siempre las indicaciones de las autoridades locales.
+            </p>
+          </div>
+        </aside>
+
+        <div>
+          <div class="mb-8">
+            <p class="mb-2 text-sm font-semibold uppercase tracking-wider text-deep-teal-700 dark:text-tropical-mint-300">
+              Aprende y prepárate
+            </p>
+            <h2 id="topics-title" class="text-3xl font-bold text-gunmetal-900 dark:text-gunmetal-50">
+              Información sobre desastres naturales
+            </h2>
+            <p class="mt-3 max-w-3xl leading-relaxed text-gunmetal-700 dark:text-gunmetal-300">
+              Cada fenómeno tiene características y riesgos distintos. Explora estas guías introductorias y descubre algunas medidas básicas de prevención.
+            </p>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-2">
+            <article id="terremotos">
+              <button type="button" class="flip-card w-full text-left" aria-pressed="false"
+                aria-label="Mostrar u ocultar información sobre terremotos">
+                <span class="flip-card-inner">
+                  <span class="flip-card-face flip-card-front">
+                    <img src="/src/Img/4.png" alt="Daños en edificios y calles después de un terremoto"
+                      loading="lazy" />
+                    <span class="block p-5 text-xl font-bold text-gunmetal-900 dark:text-gunmetal-50">Terremotos</span>
+                  </span>
+                  <span class="flip-card-face flip-card-back">
+                    <span class="text-xl font-bold">¿Qué es un terremoto?</span>
+                    <span class="mt-3 leading-relaxed">Es una sacudida del suelo causada por la liberación repentina de energía en la corteza terrestre. Durante uno, agáchate, cúbrete y sujétate; aléjate de ventanas.</span>
+                  </span>
+                </span>
+              </button>
+            </article>
+
+            <article id="inundaciones">
+              <button type="button" class="flip-card w-full text-left" aria-pressed="false"
+                aria-label="Mostrar u ocultar información sobre inundaciones y tsunamis">
+                <span class="flip-card-inner">
+                  <span class="flip-card-face flip-card-front">
+                    <img src="/src/Img/6.png" alt="Ola de gran tamaño acercándose a una zona costera"
+                      loading="lazy" />
+                    <span class="block p-5 text-xl font-bold text-gunmetal-900 dark:text-gunmetal-50">Inundaciones y tsunamis</span>
+                  </span>
+                  <span class="flip-card-face flip-card-back">
+                    <span class="text-xl font-bold">¿Qué son?</span>
+                    <span class="mt-3 leading-relaxed">Una inundación ocurre cuando el agua cubre zonas normalmente secas. Un tsunami es una serie de olas grandes, generalmente causada por movimientos submarinos. Aléjate de ríos crecidos y costas si hay alertas.</span>
+                  </span>
+                </span>
+              </button>
+            </article>
+
+            <article id="incendios">
+              <button type="button" class="flip-card w-full text-left" aria-pressed="false"
+                aria-label="Mostrar u ocultar información sobre incendios forestales">
+                <span class="flip-card-inner">
+                  <span class="flip-card-face flip-card-front">
+                    <img src="/src/Img/2.png" alt="Incendio forestal avanzando entre árboles"
+                      loading="lazy" />
+                    <span class="block p-5 text-xl font-bold text-gunmetal-900 dark:text-gunmetal-50">Incendios forestales</span>
+                  </span>
+                  <span class="flip-card-face flip-card-back">
+                    <span class="text-xl font-bold">¿Qué es un incendio forestal?</span>
+                    <span class="mt-3 leading-relaxed">Es un fuego que se propaga sin control por bosques o áreas naturales. El calor, el viento y la vegetación seca pueden acelerarlo. Sigue las alertas y evacúa cuando las autoridades lo indiquen.</span>
+                  </span>
+                </span>
+              </button>
+            </article>
+
+            <article id="volcanes">
+              <button type="button" class="flip-card w-full text-left" aria-pressed="false"
+                aria-label="Mostrar u ocultar información sobre erupciones volcánicas">
+                <span class="flip-card-inner">
+                  <span class="flip-card-face flip-card-front">
+                    <img src="/src/Img/7.png" alt="Volcán en erupción durante la noche"
+                      loading="lazy" />
+                    <span class="block p-5 text-xl font-bold text-gunmetal-900 dark:text-gunmetal-50">Erupciones volcánicas</span>
+                  </span>
+                  <span class="flip-card-face flip-card-back">
+                    <span class="text-xl font-bold">¿Qué es una erupción volcánica?</span>
+                    <span class="mt-3 leading-relaxed">Es la salida de magma, gases y ceniza desde el interior de un volcán. Puede generar flujos y caída de materiales peligrosos; respeta las zonas de evacuación y protégete de la ceniza según las alertas oficiales.</span>
+                  </span>
+                </span>
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="historical-cases" aria-labelledby="historical-cases-title" class="bg-gunmetal-50 px-4 py-12 dark:bg-gunmetal-950 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-6xl">
+          <div class="mb-8 max-w-3xl">
+            <p class="mb-2 text-sm font-semibold uppercase tracking-[0.18em] text-deep-teal-700 dark:text-tropical-mint-300">
+              Casos históricos
+            </p>
+            <h2 id="historical-cases-title" class="text-3xl font-bold text-gunmetal-900 dark:text-gunmetal-50">
+              Desastres naturales que marcaron la historia
+            </h2>
+            <p class="mt-3 text-base leading-relaxed text-gunmetal-700 dark:text-gunmetal-300">
+              Estos eventos muestran cómo los procesos naturales pueden afectar a comunidades enteras, incluso en regiones muy distintas. Su estudio ayuda a entender mejor la vulnerabilidad, la preparación y la respuesta ante emergencias.
+            </p>
+          </div>
+
+          <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <article class="overflow-hidden rounded-2xl border border-gunmetal-200 bg-white shadow-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-md dark:border-gunmetal-800 dark:bg-gunmetal-900">
+              <figure>
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/2011_T%C5%8Dhoku_earthquake_and_tsunami_damage_Iwaki%2C_Fukushima_1.JPG/960px-2011_T%C5%8Dhoku_earthquake_and_tsunami_damage_Iwaki%2C_Fukushima_1.JPG" alt="Daños en Iwaki, Fukushima, tras el terremoto y tsunami de Tōhoku de 2011" class="h-52 w-full object-cover" loading="lazy" decoding="async" />
+                <figcaption class="bg-gunmetal-100 px-5 py-2 text-xs text-gunmetal-700 dark:bg-gunmetal-800 dark:text-gunmetal-300">
+                  Foto: Cp9asngf · <a href="https://commons.wikimedia.org/wiki/File:2011_T%C5%8Dhoku_earthquake_and_tsunami_damage_Iwaki,_Fukushima_1.JPG" target="_blank" rel="noreferrer" class="underline underline-offset-2">Wikimedia Commons (CC BY-SA 3.0)</a>
+                </figcaption>
+              </figure>
+              <div class="p-5">
+                <span class="mb-2 block text-xs font-semibold uppercase tracking-[0.18em] text-deep-teal-700 dark:text-tropical-mint-300">2011 · Japón</span>
+                <h3 class="text-xl font-bold text-gunmetal-900 dark:text-gunmetal-50">Tsunami de Japón</h3>
+                <p class="mt-3 text-sm leading-relaxed text-gunmetal-700 dark:text-gunmetal-300">
+                  El sismo de Tōhoku, de magnitud 9.0, generó un tsunami que avanzó por la costa este del país. La energía del mar destruyó pueblos, infraestructura y centrales nucleares, dejando un impacto humano y ambiental enorme.
+                </p>
+                <p class="mt-3 text-sm leading-relaxed text-gunmetal-700 dark:text-gunmetal-300">
+                  <strong class="text-gunmetal-900 dark:text-gunmetal-50">Impacto:</strong> miles de víctimas, evacuaciones masivas y daños económicos de gran escala.
+                </p>
+                <p class="mt-3 text-xs font-medium text-gunmetal-600 dark:text-gunmetal-400">
+                  Fuente: <a href="https://www.usgs.gov/news/featured-story/2011-tohoku-japan-earthquake-and-tsunami" target="_blank" rel="noreferrer" class="underline decoration-2 underline-offset-2 hover:text-deep-teal-700 dark:hover:text-tropical-mint-300">USGS</a>
+                </p>
+              </div>
+            </article>
+
+            <article class="overflow-hidden rounded-2xl border border-gunmetal-200 bg-white shadow-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-md dark:border-gunmetal-800 dark:bg-gunmetal-900">
+              <figure>
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Post-and-Grant-Avenue-Look.jpg/960px-Post-and-Grant-Avenue-Look.jpg" alt="Ruinas cerca de Post y Grant Avenue después del terremoto de San Francisco de 1906" class="h-52 w-full object-cover" loading="lazy" decoding="async" />
+                <figcaption class="bg-gunmetal-100 px-5 py-2 text-xs text-gunmetal-700 dark:bg-gunmetal-800 dark:text-gunmetal-300">
+                  Foto: H. D. Chadwick / NARA · <a href="https://commons.wikimedia.org/wiki/File:Post-and-Grant-Avenue-Look.jpg" target="_blank" rel="noreferrer" class="underline underline-offset-2">Wikimedia Commons</a>
+                </figcaption>
+              </figure>
+              <div class="p-5">
+                <span class="mb-2 block text-xs font-semibold uppercase tracking-[0.18em] text-deep-teal-700 dark:text-tropical-mint-300">1906 · Estados Unidos</span>
+                <h3 class="text-xl font-bold text-gunmetal-900 dark:text-gunmetal-50">Terremoto de San Francisco</h3>
+                <p class="mt-3 text-sm leading-relaxed text-gunmetal-700 dark:text-gunmetal-300">
+                  El temblor de San Francisco destruyó edificios, incendios se propagaron por la ciudad y la respuesta ante la emergencia cambió la forma en que se diseñan las ciudades en zonas sísmicas.
+                </p>
+                <p class="mt-3 text-sm leading-relaxed text-gunmetal-700 dark:text-gunmetal-300">
+                  <strong class="text-gunmetal-900 dark:text-gunmetal-50">Impacto:</strong> gran pérdida material, desplazamiento masivo y una crisis humanitaria breve pero intensa.
+                </p>
+                <p class="mt-3 text-xs font-medium text-gunmetal-600 dark:text-gunmetal-400">
+                  Fuente: <a href="https://www.usgs.gov/centers/northern-california-branch/science/1906-san-francisco-earthquake" target="_blank" rel="noreferrer" class="underline decoration-2 underline-offset-2 hover:text-deep-teal-700 dark:hover:text-tropical-mint-300">USGS</a>
+                </p>
+              </div>
+            </article>
+
+            <article class="overflow-hidden rounded-2xl border border-gunmetal-200 bg-white shadow-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-md dark:border-gunmetal-800 dark:bg-gunmetal-900 md:col-span-2 xl:col-span-1">
+              <figure>
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/1815_tambora_explosion_B.png/960px-1815_tambora_explosion_B.png" alt="Mapa de la erupción del Tambora de 1815 y la extensión de la caída de ceniza" class="h-52 w-full object-cover" loading="lazy" decoding="async" />
+                <figcaption class="bg-gunmetal-100 px-5 py-2 text-xs text-gunmetal-700 dark:bg-gunmetal-800 dark:text-gunmetal-300">
+                  Mapa: Wikid77 · <a href="https://commons.wikimedia.org/wiki/File:1815_tambora_explosion_B.png" target="_blank" rel="noreferrer" class="underline underline-offset-2">Wikimedia Commons (CC BY-SA 3.0)</a>
+                </figcaption>
+              </figure>
+              <div class="p-5">
+                <span class="mb-2 block text-xs font-semibold uppercase tracking-[0.18em] text-deep-teal-700 dark:text-tropical-mint-300">1815 · Indonesia</span>
+                <h3 class="text-xl font-bold text-gunmetal-900 dark:text-gunmetal-50">Erupción del Tambora</h3>
+                <p class="mt-3 text-sm leading-relaxed text-gunmetal-700 dark:text-gunmetal-300">
+                  La erupción del Tambora fue una de las más grandes registradas en la historia. Envió ceniza y gases a la atmósfera, redujo la temperatura global y provocó escasez de alimentos en varias regiones.
+                </p>
+                <p class="mt-3 text-sm leading-relaxed text-gunmetal-700 dark:text-gunmetal-300">
+                  <strong class="text-gunmetal-900 dark:text-gunmetal-50">Impacto:</strong> cientos de miles de muertes indirectas, hambrunas y alteración climática global.
+                </p>
+                <p class="mt-3 text-xs font-medium text-gunmetal-600 dark:text-gunmetal-400">
+                  Fuente: <a href="https://volcano.si.edu/volcano.cfm?vn=265060" target="_blank" rel="noreferrer" class="underline decoration-2 underline-offset-2 hover:text-deep-teal-700 dark:hover:text-tropical-mint-300">Global Volcanism Program</a>
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="mt-8 rounded-2xl bg-white p-5 shadow-sm dark:bg-gunmetal-900">
+            <h3 class="text-lg font-bold text-gunmetal-900 dark:text-gunmetal-50">Fuentes</h3>
+            <ul class="mt-3 space-y-2 text-sm leading-relaxed text-gunmetal-700 dark:text-gunmetal-300">
+              <li>• USGS — <a href="https://www.usgs.gov/" target="_blank" rel="noreferrer" class="underline decoration-2 underline-offset-2 hover:text-deep-teal-700 dark:hover:text-tropical-mint-300">United States Geological Survey</a></li>
+              <li>• Smithsonian Institution — <a href="https://volcano.si.edu/" target="_blank" rel="noreferrer" class="underline decoration-2 underline-offset-2 hover:text-deep-teal-700 dark:hover:text-tropical-mint-300">Global Volcanism Program</a></li>
+              <li>• National Geographic / reportes históricos de desastres naturales y su impacto social.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-gunmetal-900 px-4 py-3">
+      <div class="mx-auto max-w-6xl text-center text-gunmetal-50">
+        &copy; 2026 Desastres Naturales. Todos los derechos reservados.
+      </div>
+    </footer>
+  </div>
   <script type="module" src="/src/main.js"></script>
 </body>
 

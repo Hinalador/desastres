@@ -1,1 +1,307 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 500ms ease, visibility 100ms ease;
+}
+
+.hero-slide[aria-hidden="false"] {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hero-slide-image,
+.hero-slide-overlay {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.hero-slide-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-slide-overlay {
+  background: linear-gradient(90deg, rgb(16 19 19 / 85%) 0%, rgb(16 19 19 / 55%) 60%, rgb(16 19 19 / 25%) 100%);
+}
+
+.hero-slide-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 6rem 1.5rem;
+}
+
+.hero-carousel-controls {
+  position: absolute;
+  z-index: 2;
+  inset: auto 0 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+  margin-inline: max(1.5rem, calc((100% - 72rem) / 2));
+}
+
+.hero-carousel-arrow {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 24%);
+  border-radius: 9999px;
+  background: rgb(16 19 19 / 30%);
+  color: rgb(255 255 255 / 88%);
+  line-height: 1;
+  transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+
+.hero-carousel-arrow svg {
+  display: block;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.hero-carousel-arrow:hover,
+.hero-carousel-arrow:focus-visible {
+  border-color: rgb(255 255 255 / 50%);
+  background: rgb(16 19 19 / 55%);
+  color: white;
+}
+
+.hero-carousel-dot {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 9999px;
+  background: rgb(255 255 255 / 55%);
+  transition: background-color 200ms ease, transform 200ms ease;
+}
+
+.hero-carousel-dot[aria-current="true"] {
+  transform: scale(1.25);
+  background: #78edc8;
+}
+
+#hero-carousel:focus-visible,
+.hero-carousel-controls button:focus-visible {
+  outline: 3px solid #78edc8;
+  outline-offset: 4px;
+}
+
+@media (min-width: 640px) {
+  .hero-slide-content {
+    padding-inline: max(1.5rem, calc((100% - 72rem) / 2));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide,
+  .hero-carousel-arrow,
+  .hero-carousel-dot {
+    transition-duration: 0ms;
+  }
+}
+
+.flip-card {
+  display: block;
+  border-radius: 1rem;
+}
+
+.flip-card-inner {
+  position: relative;
+  display: block;
+  min-height: 22rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 10px 24px rgb(16 19 19 / 12%);
+}
+
+.flip-card-face {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.flip-card-front img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 500ms;
+}
+
+.flip-card-front::after {
+  position: absolute;
+  inset: 35% 0 0;
+  background: linear-gradient(transparent, rgb(16 19 19 / 80%));
+  content: "";
+}
+
+.flip-card-front > span {
+  position: absolute;
+  z-index: 1;
+  inset: auto 0 0;
+  padding: 1.25rem;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.flip-card-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(16 19 19 / 90%);
+  color: white;
+  opacity: 0;
+  padding: 1.5rem;
+  transition: opacity 300ms ease;
+}
+
+.flip-card-back > span:first-child {
+  color: #78edc8;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.flip-card-back > span:last-child {
+  margin-top: 0.75rem;
+  line-height: 1.625;
+}
+
+.flip-card:hover .flip-card-front img,
+.flip-card:focus-visible .flip-card-front img,
+.flip-card[aria-pressed="true"] .flip-card-front img {
+  transform: scale(1.06);
+}
+
+.flip-card:hover .flip-card-back,
+.flip-card:focus-visible .flip-card-back,
+.flip-card[aria-pressed="true"] .flip-card-back {
+  opacity: 1;
+}
+
+.flip-card:focus-visible {
+  outline: 3px solid #4be7b5;
+  outline-offset: 4px;
+}
+
+.prevention-step-button {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  border: 1px solid var(--color-gunmetal-300);
+  border-radius: 9999px;
+  color: var(--color-gunmetal-700);
+  font-weight: 700;
+}
+
+.prevention-step-button:hover,
+.prevention-step-button:focus-visible,
+.prevention-step-button[aria-current="step"] {
+  border-color: var(--color-deep-teal-700);
+  background: var(--color-deep-teal-700);
+  color: white;
+}
+
+.dark .prevention-step-button {
+  border-color: var(--color-gunmetal-700);
+  color: var(--color-gunmetal-200);
+}
+
+.dark .prevention-step-button:hover,
+.dark .prevention-step-button:focus-visible,
+.dark .prevention-step-button[aria-current="step"] {
+  border-color: var(--color-tropical-mint-400);
+  background: var(--color-tropical-mint-400);
+  color: var(--color-gunmetal-950);
+}
+
+.prevention-step-button:focus-visible {
+  outline: 3px solid #4be7b5;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flip-card-front img,
+  .flip-card-back {
+    transition-duration: 0ms;
+  }
+}
+
+@theme {
+
+--color-gunmetal-50: #f1f3f3;
+--color-gunmetal-100: #e3e8e7;
+--color-gunmetal-200: #c7d1d0;
+--color-gunmetal-300: #acb9b8;
+--color-gunmetal-400: #90a2a0;
+--color-gunmetal-500: #748b89;
+--color-gunmetal-600: #5d6f6d;
+--color-gunmetal-700: #465352;
+--color-gunmetal-800: #2e3837;
+--color-gunmetal-900: #171c1b;
+--color-gunmetal-950: #101313;
+
+--color-deep-teal-50: #f1f3f2;
+--color-deep-teal-100: #e3e8e5;
+--color-deep-teal-200: #c7d1ca;
+--color-deep-teal-300: #acb9b0;
+--color-deep-teal-400: #90a295;
+--color-deep-teal-500: #748b7b;
+--color-deep-teal-600: #5d6f62;
+--color-deep-teal-700: #46534a;
+--color-deep-teal-800: #2e3831;
+--color-deep-teal-900: #171c19;
+--color-deep-teal-950: #101311;
+
+--color-celadon-50: #edf7f1;
+--color-celadon-100: #dbf0e3;
+--color-celadon-200: #b8e0c7;
+--color-celadon-300: #94d1ab;
+--color-celadon-400: #70c28f;
+--color-celadon-500: #4db374;
+--color-celadon-600: #3d8f5c;
+--color-celadon-700: #2e6b45;
+--color-celadon-800: #1f472e;
+--color-celadon-900: #0f2417;
+--color-celadon-950: #0b1910;
+
+--color-emerald-50: #ecf9ee;
+--color-emerald-100: #d9f2dd;
+--color-emerald-200: #b3e6bb;
+--color-emerald-300: #8cd999;
+--color-emerald-400: #66cc77;
+--color-emerald-500: #40bf55;
+--color-emerald-600: #339944;
+--color-emerald-700: #267333;
+--color-emerald-800: #194d22;
+--color-emerald-900: #0d2611;
+--color-emerald-950: #091b0c;
+
+--color-tropical-mint-50: #e9fcf6;
+--color-tropical-mint-100: #d2f9ed;
+--color-tropical-mint-200: #a5f3da;
+--color-tropical-mint-300: #78edc8;
+--color-tropical-mint-400: #4be7b5;
+--color-tropical-mint-500: #1fe0a3;
+--color-tropical-mint-600: #18b482;
+--color-tropical-mint-700: #128762;
+--color-tropical-mint-800: #0c5a41;
+--color-tropical-mint-900: #062d21;
+--color-tropical-mint-950: #041f17;
+
+}
