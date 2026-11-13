@@ -10,10 +10,10 @@
 
 <body class="min-h-screen bg-gunmetal-50 text-gunmetal-900 dark:bg-gunmetal-950 dark:text-gunmetal-100">
   <header class="bg-gunmetal-900 px-4 py-3">
-    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 sm:flex-nowrap">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-3 gap-y-2 sm:flex-nowrap sm:gap-4">
       <a href="../index.html">
         <img src="../src/Img/download.png" alt="Logo de Desastres Naturales"
-          class="h-16 w-16 transition-transform duration-200 ease-in-out hover:scale-110" />
+          class="h-12 w-12 transition-transform duration-200 ease-in-out hover:scale-110 sm:h-16 sm:w-16" />
       </a>
       <div class="flex items-center gap-3 sm:order-3">
         <button id="theme-toggle" type="button" aria-label="Cambiar al modo oscuro" aria-pressed="false"
@@ -49,11 +49,11 @@
     </div>
   </header>
 
-  <main class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:py-12">
-    <div class="grid gap-6 lg:grid-cols-[minmax(16rem,0.78fr)_minmax(0,1.5fr)] lg:items-start">
-      <aside class="rounded-lg bg-deep-teal-900 p-6 text-white shadow-md sm:p-8 dark:bg-deep-teal-950">
+  <main class="mx-auto max-w-7xl px-3 py-6 sm:px-6 sm:py-8 lg:py-12">
+    <div class="grid min-w-0 gap-4 sm:gap-6 lg:grid-cols-[minmax(16rem,0.78fr)_minmax(0,1.5fr)] lg:items-start">
+      <aside class="min-w-0 rounded-lg bg-deep-teal-900 p-5 text-white shadow-md sm:p-8 dark:bg-deep-teal-950">
         <p class="text-sm font-semibold uppercase tracking-wide text-tropical-mint-300">Centro de reportes</p>
-        <h1 class="mt-3 text-3xl font-bold">Tu información puede ayudar</h1>
+        <h1 class="mt-3 text-2xl font-bold sm:text-3xl">Tu información puede ayudar</h1>
         <p class="mt-4 leading-7 text-gunmetal-100">
           Este formulario es una demostración y por ahora no envía ni guarda reportes. No lo uses para pedir ayuda durante una emergencia.
         </p>
@@ -90,7 +90,7 @@
         </div>
       </aside>
 
-      <section class="rounded-lg bg-white p-5 shadow-md sm:p-8 dark:bg-gunmetal-900">
+      <section class="min-w-0 rounded-lg bg-white p-4 shadow-md sm:p-8 dark:bg-gunmetal-900">
         <div class="mb-6 flex flex-col gap-2 border-b border-gunmetal-200 pb-5 sm:flex-row sm:items-end sm:justify-between dark:border-gunmetal-700">
           <div>
             <p class="text-sm font-semibold text-red-500">Formulario de reporte</p>
@@ -103,7 +103,7 @@
           Si alguien está en peligro, contacta primero a los servicios de emergencia de tu zona.
         </div>
 
-        <form action="#" method="post" class="space-y-6">
+        <form action="#" method="post" class="min-w-0 space-y-6">
           <div class="grid gap-5 sm:grid-cols-2">
             <div>
               <label for="tipo" class="mb-1.5 block text-sm font-semibold">Tipo de evento <span aria-hidden="true">*</span></label>
@@ -153,12 +153,12 @@
 
           <fieldset class="space-y-3">
             <legend class="text-sm font-semibold">Ubicación del evento <span aria-hidden="true">*</span></legend>
-            <div class="flex flex-col gap-2 sm:flex-row">
+            <div class="grid grid-cols-[minmax(0,1fr)_2.75rem] gap-2 sm:flex">
               <label for="map-search" class="sr-only">Buscar dirección o lugar</label>
               <input id="map-search" type="search" placeholder="Busca una dirección, ciudad o lugar"
-                class="min-w-0 flex-1 rounded-md border border-gunmetal-300 bg-white px-3 py-2.5 text-gunmetal-900 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50" />
+                class="col-span-2 min-w-0 rounded-md border border-gunmetal-300 bg-white px-3 py-2.5 text-gunmetal-900 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400 sm:flex-1 dark:border-gunmetal-600 dark:bg-gunmetal-800 dark:text-gunmetal-50" />
               <button id="search-location" type="button"
-                class="rounded-md bg-gunmetal-800 px-4 py-2.5 font-semibold text-white hover:bg-gunmetal-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tropical-mint-500 dark:bg-gunmetal-700 dark:hover:bg-gunmetal-600">
+                class="w-full rounded-md bg-gunmetal-800 px-4 py-2.5 font-semibold text-white hover:bg-gunmetal-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tropical-mint-500 sm:w-auto dark:bg-gunmetal-700 dark:hover:bg-gunmetal-600">
                 Buscar lugar
               </button>
               <button id="use-current-location" type="button" aria-label="Usar mi ubicación actual" title="Usar mi ubicación actual"
@@ -172,7 +172,7 @@
             </div>
 
             <div id="report-map" role="application" aria-label="Mapa interactivo para seleccionar la ubicación del evento"
-              class="h-72 w-full overflow-hidden rounded-md border border-gunmetal-300 bg-gunmetal-100 sm:h-80 dark:border-gunmetal-600"></div>
+              class="h-64 w-full overflow-hidden rounded-md border border-gunmetal-300 bg-gunmetal-100 sm:h-80 dark:border-gunmetal-600"></div>
             <p id="map-status" aria-live="polite" class="min-h-5 text-sm text-gunmetal-700 dark:text-gunmetal-300">
               Busca un lugar o selecciona un punto directamente en el mapa.
             </p>
