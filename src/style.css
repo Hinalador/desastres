@@ -2,6 +2,16 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+.home-navigation {
+  order: 3;
+}
+
+@media (min-width: 640px) {
+  .home-navigation {
+    order: 1;
+  }
+}
+
 .hero-slide {
   position: absolute;
   inset: 0;
