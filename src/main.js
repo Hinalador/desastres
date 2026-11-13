@@ -24,6 +24,33 @@ themeToggle.addEventListener('click', () => {
   updateTheme()
 })
 
+const navigationToggle = document.querySelector('#navigation-toggle')
+const navigationIcon = document.querySelector('#navigation-icon')
+const primaryNavigation = document.querySelector('#primary-navigation')
+
+if (
+  navigationToggle instanceof HTMLButtonElement &&
+  navigationIcon instanceof HTMLSpanElement &&
+  primaryNavigation instanceof HTMLElement
+) {
+  const setNavigationOpen = (isOpen) => {
+    navigationToggle.setAttribute('aria-expanded', String(isOpen))
+    navigationToggle.setAttribute('aria-label', `${isOpen ? 'Cerrar' : 'Abrir'} menú de navegación`)
+    navigationIcon.textContent = isOpen ? '×' : '☰'
+    primaryNavigation.classList.toggle('hidden', !isOpen)
+  }
+
+  navigationToggle.addEventListener('click', () => {
+    setNavigationOpen(navigationToggle.getAttribute('aria-expanded') !== 'true')
+  })
+
+  primaryNavigation.addEventListener('click', (event) => {
+    if (event.target instanceof HTMLAnchorElement) {
+      setNavigationOpen(false)
+    }
+  })
+}
+
 const heroCarousel = document.querySelector('#hero-carousel')
 
 if (heroCarousel instanceof HTMLElement) {
