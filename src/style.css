@@ -2,6 +2,30 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+.moto-ride {
+  position: fixed;
+  z-index: 9999;
+  top: 65vh;
+  left: 0;
+  width: min(88vw, 42rem);
+  max-width: none;
+  pointer-events: none;
+  transform: translateX(-100%);
+  animation: moto-cross-screen 4s linear forwards;
+}
+
+@keyframes moto-cross-screen {
+  to {
+    transform: translateX(100vw);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .moto-ride {
+    animation-duration: 1ms;
+  }
+}
+
 .home-navigation {
   order: 3;
 }
