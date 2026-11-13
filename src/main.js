@@ -1,3 +1,5 @@
+import motorcycleImage from './Img/moto.png'
+
 const themeToggle = document.querySelector('#theme-toggle')
 const themeIcon = document.querySelector('#theme-icon')
 
@@ -18,10 +20,26 @@ const updateTheme = () => {
 
 updateTheme()
 
+let themeToggleCount = 0
+let motorcycleAnimationPlayed = false
+
 themeToggle.addEventListener('click', () => {
   isDarkMode = !isDarkMode
   localStorage.setItem('theme', isDarkMode ? 'dark' : 'light')
   updateTheme()
+
+  themeToggleCount += 1
+
+  if (themeToggleCount === 5 && !motorcycleAnimationPlayed) {
+    motorcycleAnimationPlayed = true
+    const motorcycle = document.createElement('img')
+    motorcycle.src = motorcycleImage
+    motorcycle.alt = ''
+    motorcycle.setAttribute('aria-hidden', 'true')
+    motorcycle.className = 'moto-ride'
+    motorcycle.addEventListener('animationend', () => motorcycle.remove(), { once: true })
+    document.body.append(motorcycle)
+  }
 })
 
 const navigationToggle = document.querySelector('#navigation-toggle')
